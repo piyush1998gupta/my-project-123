@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD</title>
+    <script type="text/javascript" src="./jquery.js" ></script>
+    <script type="text/javascript" src="./script.js"  ></script>
+
+    <!--<script src="querypage.js"></script>-->
+</head>
+<body>
+
+<form id="dataentry">
+    Semester :- <select id="qsemester" name="qsemesterselect" required>
+    <!--<option disabled selected >select semester</option>-->
+    <option selected >5</option>
+    <option>4</option>
+    <!--<option>5</option>-->
+    <!--<option>6</option>-->
+    <!--<option>7</option>-->
+    <!--<option>8</option>-->
+
+</select><br>
+    RoomType :- <select id="qroomtype" name="qroomtype" required>
+    <option disabled selected default> Select Room Type</option>
+    <option > Tutorial</option>
+    <option > Lecture</option>
+    <option > Lab</option>
+
+</select><br>
+    Room No. :- <select id="qroomno" name="qroomno" required>
+    <option selected disabled> Select room</option>
+
+</select><br>
+    Class-Group :- <select id="qclassgroup" name="qclassgroup" required>
+    <option disabled selected> Select Group</option>
+
+
+</select><br>
+    Day:- <select id="qday" name="qday" required>
+    <option disabled selected> Select Day</option>
+    <option >Monday</option>
+    <option >Tuesday</option>
+    <option >Wednesday</option>
+    <option >Thursday</option>
+    <option >Friday</option>
+
+
+</select>
+    <br>
+
+    Time-Slot :-  Start-time <select id="qstarttime" name="qstarttime" required>
+    <option disabled selected> select start time </option>
+    <option class="strthide" hidden> 9:15:00 </option>
+    <option class="strthide" hidden> 10:05:00 </option>
+    <option class="strthide" hidden> 10:55:00 </option>
+    <option hidden class="labdisabled strthide"> 11:45:00 </option>
+    <option class="strthide" hidden> 1:15:00 </option>
+    <option class="strthide" hidden> 2:05:00 </option>
+    <option class="strthide" hidden> 2:55:00 </option>
+    <option class="strthide labdisabled" hidden > 3:45:00 </option>
+
+</select>
+    End-time  <select id="qendtime" name="qendtime" required readonly>
+    <option disabled selected> select end time </option>
+
+</select><br>
+
+    Course Name :- <select id="qcoursename" name="qcoursename" required>
+    <option disabled selected> Select Course </option>
+</select><br>
+    Teacher name :- <select id="qteachename" name="qteachername" required>
+    <option disabled selected> Select teacher</option>
+</select><br>
+
+    <input type="submit" id="qadd" placeholder="Add">
+
+
+</form>
+
+
+
+
+</body>
+</html>

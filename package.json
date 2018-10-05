@@ -1,0 +1,16 @@
+{
+  "name": "collegeproject",
+  "version": "1.0.0",
+  "description": "helps_in_maintaining_the_timetable_of_college",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.2",
+    "express": "^4.16.3",
+    "mysql2": "^1.6.1"
+  }
+}

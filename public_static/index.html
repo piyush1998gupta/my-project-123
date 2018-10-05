@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <script src="jquery.js"></script>
+    <!--<script src="script.js"></script>-->
+</head>
+<body>
+
+
+<form id="dataquerys" >
+    Semester :- <select id="ssemesterselect" name="ssemesterselect" >
+    <!--<option disabled selected >select semester</option>-->
+    <option selected >5</option>
+    <!--<option>4</option>-->
+    <!--<option>5</option>-->
+    <!--<option>6</option>-->
+    <!--<option>7</option>-->
+    <!--<option>8</option>-->
+
+</select><br>
+    RoomType :- <select id="sroomtype" name="sroomtype" >
+    <option selected> All Room Type</option>
+    <option > Tutorial</option>
+    <option > Lecture</option>
+    <option > Lab</option>
+
+</select><br>
+    Room No. :- <select id="sroom_no" name="sroom_no" >
+    <option selected> All room</option>
+
+</select><br>
+    Class-Group :- <select id="sclassgroup" name="sclassgroup" >
+    <option  selected> All Group</option>
+    <option class=""> C-1</option>
+    <option > C-2</option>
+    <option > C-3</option>
+    <option > C-4</option>
+    <option > C-5</option>
+    <option > C-6</option>
+    <option > C-7</option>
+    <option > C-8</option>
+    <option > C-9</option>
+    <option > C-10</option>
+    <option > C-11</option>
+    <option > C-12</option>
+    <option > C-13</option>
+
+</select><br>
+    Day:- <select id="sday" name="sday">
+    <option selected> All Day</option>
+    <option >Monday</option>
+    <option >Tuesday</option>
+    <option >Wednesday</option>
+    <option >Thursday</option>
+    <option >Friday</option>
+
+
+</select>
+    <br>
+
+    Time-Slot :-  Start-time <select id="sstarttime" name="sstarttime" >
+    <option selected> start time </option>
+    <option class="strthide" hidden> 9:15:00 </option>
+    <option class="strthide" hidden> 10:05:00 </option>
+    <option class="strthide" hidden> 10:55:00 </option>
+    <option hidden class="labdisabled strthide"> 11:45:00 </option>
+    <option class="strthide" hidden> 1:15:00 </option>
+    <option class="strthide" hidden> 2:05:00 </option>
+    <option class="strthide" hidden> 2:55:00 </option>
+    <option class="strthide" hidden class="labdisabled"> 3:45:00 </option>
+
+</select>
+    End-time  <select id="sendtime" name="sendtime"readonly>
+    <option  selected> End Time </option>
+
+</select><br>
+
+
+    Course Name :- <select id="scoursename" name="scoursename" >
+    <option  selected> All Course </option>
+</select><br>
+    Teacher name :- <select id="steachename" name="steachername" >
+    <option  selected> All teacher</option>
+</select><br>
+
+    <input type="submit" id="sadd" placeholder="Add">
+
+
+</form>
+
+<div class="parent">
+    <div class="child1:2"></div>
+    <div class="child2"></div>
+    <div class="child4"></div>
+</div>
+
+<table id="mainresult" border="1" width="100%" height="100%" hidden>
+    <caption id="tablecaption"></caption>
+    <tbody>
+    <th>
+
+    <td>9:15-10:05</td>
+    <td>10:05-10:55</td>
+    <td>10:55-11:45</td>
+    <td>11:45-12:35</td>
+    <td>1:15-2:05</td>
+    <td>2:05-2:55</td>
+    <td>2:55-3:45</td>
+    <td>3:45-4:35</td>
+
+    </th>
+
+    <tr class="Monday">
+        <td class="Monday">Monday</td>
+        <td class="091500 clr"></td>
+        <td class="100500 clr"></td>
+        <td class="105500 clr"></td>
+        <td class="114500 clr"></td>
+
+        <td class="011500 clr"></td>
+        <td class="020500 clr"></td>
+        <td class="025500 clr"></td>
+        <td class="033500 clr"></td>
+    </tr>
+
+    <tr class="Tuesday">
+        <td>Tuesday</td>
+        <td class="091500 clr"></td>
+        <td class="100500 clr"></td>
+        <td class="105500 clr"></td>
+        <td class="114500 clr" ></td>
+
+        <td class="011500 clr"></td>
+        <td class="020500 clr"></td>
+        <td class="025500 clr"></td>
+        <td class="033500 clr"></td>
+    </tr>
+    <tr class="Wednesday">
+        <td>Wednesday</td>
+        <td class="091500 clr"></td>
+        <td class="100500 clr"></td>
+        <td class="105500 clr"></td>
+        <td class="114500 clr"></td>
+
+        <td class="011500 clr"></td>
+        <td class="020500 clr"></td>
+        <td class="025500 clr"></td>
+        <td class="033500 clr"></td>
+    </tr>
+    <tr class="Thursday">
+        <td>Thursday</td>
+        <td class="091500 clr"></td>
+        <td class="100500 clr"></td>
+        <td class="105500 clr"></td>
+        <td class="114500 clr"></td>
+
+        <td class="011500 clr"></td>
+        <td class="020500 clr"></td>
+        <td class="025500 clr"></td>
+        <td class="033500 clr"></td>
+    </tr>
+    <tr class="Friday">
+        <td>friday</td>
+        <td class="091500 clr"></td>
+        <td class="100500 clr"></td>
+        <td class="105500 clr"></td>
+        <td class="114500 clr"></td>
+
+        <td class="011500 clr"></td>
+        <td class="020500 clr"></td>
+        <td class="025500 clr"></td>
+        <td class="033500 clr"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
