@@ -41,10 +41,10 @@ route.get("/RoomNumber",(req,res)=>{
 
 route.post("/add",async (req,res)=>{
 
-    var CourseCode = await controller.getcoursecode(req.body.qcoursename).then((coursecode)=>{
+    var CourseCode = await controllerAdd.getcoursecode(req.body.qcoursename).then((coursecode)=>{
         return coursecode[0].CourseCode;
     })
-    var TeacherId = await controller.getteacherid(req.body.qteachername).then((teacherid)=>{
+    var TeacherId = await controllerAdd.getteacherid(req.body.qteachername).then((teacherid)=>{
         return teacherid[0].TeacherId;
     })
     var RoomId = req.body.qroomno;
@@ -54,7 +54,7 @@ route.post("/add",async (req,res)=>{
     var   Day=req.body.qday
     var  CourseType= req.body.qroomtype
     var Message,classarray=[]
-    console.log(req.body.qclassgroup)
+    //console.log(req.body.qclassgroup)
     if(req.body.qclassgroup=="C-123"||req.body.qclassgroup=="C-456"||req.body.qclassgroup=="C-789"||req.body.qclassgroup=="C-111213") {
         //  console.log(req.body.qclassgroup)
         var cla = (req.body.qclassgroup).split("-")

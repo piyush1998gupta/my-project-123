@@ -42,7 +42,7 @@ async function getallcourses(Semester,CourseType){
     return new Promise(async (resolve,reject)=>{
         await connection.then(async (conn)=>{
 
-            conn.query("select * from AddCourse where Semester = ? And CourseType = ?",[Semester,CourseType]).then(([row,field])=>{
+            conn.query("select * from AddCourse where CourseSemester = ? And CourseType = ?",[Semester,CourseType]).then(([row,field])=>{
 
                 resolve (row);
 
