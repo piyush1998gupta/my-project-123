@@ -132,12 +132,12 @@ async function getallvalues(queryobject){
 
 
 
-            console.log(MainQuery)
+            // console.log(MainQuery);
 
 
 
             conn.query(MainQuery).then(([row,field])=>{
-                console.log(row.length)
+                // console.log(row.length)
                 resolve(row)
             }).catch((err)=>{
                 reject (err)
