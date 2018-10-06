@@ -1,6 +1,71 @@
 const controllerquery = require("../Controller/MainQuery")
+const controlleroptions = require("../Controller/OptionQuery")
 const route = require("express").Router()
-route.post("/Query",(req,res)=>{
+
+
+route.get("/GetRooms",(req,res)=>{
+    // console.log(req.query.RoomBranch)
+    const Queryobject = {
+        RoomBranch: req.query.RoomBranch,
+        RoomType : req.query.RoomType
+    }
+
+    // console.log(Queryobject)
+    controlleroptions.getallRooms(Queryobject).then((data)=>{
+        res.send(data)
+    })
+
+
+
+
+
+
+})
+
+
+
+route.get("/GetCourses",(req,res)=>{
+    // console.log(req.query.RoomBranch)
+    const Queryobject = {
+        CourseBranch : req.query.Coursebranch,
+        CourseType : req.query.Coursetype,
+        CourseSemester: req.query.Coursesemester
+    }
+
+    // console.log(Queryobject)
+    controlleroptions.getallCourses(Queryobject).then((data)=>{
+        // console.log(data)
+        res.send(data)
+    })
+
+
+
+
+
+
+})
+
+
+route.get("/GetTeachers",(req,res)=>{
+
+    var Query = {
+        TeacherBranch : req.query.Teacherbranch,
+        CourseName : req.query.Coursename
+    }
+
+    controlleroptions.getallTeachers(Query).then((data)=>{
+        // console.log(data)
+        res.send(data)
+    })
+})
+
+
+
+
+
+
+
+route.post("/QuerySearch",(req,res)=>{
 
     var Semester,RoomType,RoomNo,ClassGroup,Day,StartTime,Endtime,CourseName,TeacherName
     Semester= req.body.ssemester

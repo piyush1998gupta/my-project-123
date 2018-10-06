@@ -11,6 +11,7 @@ app.use("/FetchingQuery",require("./Router/FetchingQuery"))
 app.use('/AddInTheDatabase',require("./Router/AddInTheDatabase"))
 
 
+
 app.listen(9090,(err)=>{
     console.log("Server Started")
 })
