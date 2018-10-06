@@ -4,36 +4,50 @@
     <meta charset="UTF-8">
     <title>Index</title>
     <script src="jquery.js"></script>
-    <!--<script src="script.js"></script>-->
+    <script src="index.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
 
 
 <form id="dataquerys" >
-    Semester :- <select id="ssemesterselect" name="ssemesterselect" >
-    <!--<option disabled selected >select semester</option>-->
-    <option selected >5</option>
+    Department :-
+    <select id="sdepartment" name="sdepartment" required >
+        <option disabled selected value="All"> All Room Branch</option>
+        <option >CSE</option>
+        <!--<option >IT</option>-->
+        <!--<option >ECE</option>-->
+        <!--<option >EEE</option>-->
+        <!--<option >MEC</option>-->
+        <!--<option >Other</option>-->
+
+
+    </select><br>
+    Semester :- <select id="ssemester" name="ssemester" >
+    <option selected value="All" >ALL SEMESTER</option>
     <!--<option>4</option>-->
-    <!--<option>5</option>-->
+    <option>5</option>
     <!--<option>6</option>-->
     <!--<option>7</option>-->
     <!--<option>8</option>-->
 
 </select><br>
+
+
     RoomType :- <select id="sroomtype" name="sroomtype" >
-    <option selected> All Room Type</option>
+    <option selected value="All"> All Room Type</option>
     <option > Tutorial</option>
     <option > Lecture</option>
     <option > Lab</option>
 
 </select><br>
-    Room No. :- <select id="sroom_no" name="sroom_no" >
-    <option selected> All room</option>
+    Room No. :- <select id="sroomno" name="sroomno" >
+    <option selected value="All"> All Room</option>
 
 </select><br>
     Class-Group :- <select id="sclassgroup" name="sclassgroup" >
-    <option  selected> All Group</option>
-    <option class=""> C-1</option>
+    <option  selected value="All"> All Group</option>
+    <option > C-1</option>
     <option > C-2</option>
     <option > C-3</option>
     <option > C-4</option>
@@ -49,7 +63,7 @@
 
 </select><br>
     Day:- <select id="sday" name="sday">
-    <option selected> All Day</option>
+    <option selected value="All"> All Days</option>
     <option >Monday</option>
     <option >Tuesday</option>
     <option >Wednesday</option>
@@ -61,28 +75,38 @@
     <br>
 
     Time-Slot :-  Start-time <select id="sstarttime" name="sstarttime" >
-    <option selected> start time </option>
-    <option class="strthide" hidden> 9:15:00 </option>
-    <option class="strthide" hidden> 10:05:00 </option>
-    <option class="strthide" hidden> 10:55:00 </option>
-    <option hidden class="labdisabled strthide"> 11:45:00 </option>
-    <option class="strthide" hidden> 1:15:00 </option>
-    <option class="strthide" hidden> 2:05:00 </option>
-    <option class="strthide" hidden> 2:55:00 </option>
-    <option class="strthide" hidden class="labdisabled"> 3:45:00 </option>
+    <option selected value="All"> ALL</option>
+    <option class="strthide" > 09:00:00 </option>
+    <option class="strthide" > 10:00:00 </option>
+    <option class="strthide" > 11:00:00 </option>
+    <option class="strthide"> 11:45:00 </option>
+    <option class="strthide" > 12:00:00 </option>
+    <option class="strthide" > 01:00:00 </option>
+    <option class="strthide" > 02:00:00 </option>
+    <option class="strthide"  > 03:00:00 </option>
+    <option class="strthide"  > 04:00:00 </option>
 
 </select>
-    End-time  <select id="sendtime" name="sendtime"readonly>
-    <option  selected> End Time </option>
+    End-time  <select id="sendtime" name="sendtime">
+    <option  selected value="All"> ALL </option>
+    <option class="endhide" > 09:00:00 </option>
+    <option class="endhide" > 10:00:00 </option>
+    <option class="endhide" > 11:00:00 </option>
+    <option class="endhide"> 11:45:00 </option>
+    <option class="endhide" > 12:00:00 </option>
+    <option class="endhide" > 01:00:00 </option>
+    <option class="endhide" > 02:00:00 </option>
+    <option class="endhide" > 03:00:00 </option>
+    <option class="endhide" > 04:00:00 </option>
 
 </select><br>
 
 
     Course Name :- <select id="scoursename" name="scoursename" >
-    <option  selected> All Course </option>
+    <option  selected value="All"> All Course </option>
 </select><br>
     Teacher name :- <select id="steachename" name="steachername" >
-    <option  selected> All teacher</option>
+    <option  selected value="All"> All teacher</option>
 </select><br>
 
     <input type="submit" id="sadd" placeholder="Add">

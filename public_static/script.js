@@ -1,166 +1,7 @@
 $(function () {
     var RoomType,Semester
 
-    // var roomtype;
-    // $("#qroomtype").change(()=> {
-    //         roomtype = $("#qroomtype").val();
-    //         console.log(roomtype);
-    //         removedclassgroup()
-    //         removeendtime()
-    //         if (roomtype == "Lab") {
-    //             $('.labdisabled').attr("disabled", "true")
-    //         } else {
-    //             $('.labdisabled').removeAttr("disabled")
-    //         }
-    //         if(roomtype=="Lecture"){
-    //             $("#qclassgroup").append(
-    //                 $("<option>").text("C-1,2,3").attr("class","tempclassgroup")
-    //             )
-    //             $("#qclassgroup").append(
-    //                 $("<option>").text("C-4,5,6").attr("class","tempclassgroup")
-    //             )
-    //             $("#qclassgroup").append(
-    //                 $("<option>").text("C-7,8,9").attr("class","tempclassgroup")
-    //             )
-    //             $("#qclassgroup").append(
-    //                 $("<option>").text("C-11,12,13").attr("class","tempclassgroup")
-    //             )
-    //         } else {
-    //             for(i=1;i<=13;i++){
-    //                 if(i!=10) {
-    //                     $("#qclassgroup").append(
-    //                         $("<option>").text("C-" + i).attr("class", "tempclassgroup")
-    //                     )
-    //                 }
-    //             }
-    //         }
-    //
-    //         $('.temproomid').remove();
-    //         $('.strthide').removeAttr("hidden");
-    //         $.get('/addquery/roomid', (data) => {
-    //             console.log(data);
-    //
-    //             for (i = 0; i < data.length; i++) {
-    //                 if (data[i].Room_Type == roomtype) {
-    //                     console.log("ghs")
-    //                     $("#qroom_no").append(
-    //                         $("<option>").text(data[i].Room_ID).attr("class", "temproomid")
-    //                     )
-    //                 }
-    //             }
-    //
-    //         })
-    //
-    //
-    //
-    //
-    //
-    //         $("#qstarttime").change(() => {
-    //
-    //             removeendtime()
-    //             var starttime = $("#qstarttime").val();
-    //             var endtime
-    //             valuesofstrttime = starttime.split(':').map(function (i) {
-    //                 return parseInt(i, 10);
-    //             });
-    //
-    //             if (roomtype == "Tutorial" || roomtype == "Lecture") {
-    //
-    //
-    //
-    //
-    //                 // if(valuesofstrttime[1])
-    //                 // }
-    //                 if (valuesofstrttime[1] != 5) {
-    //                     valuesofstrttime[1] -= 10;
-    //                     valuesofstrttime[0] += 1;
-    //
-    //                     if (parseInt(valuesofstrttime[1] / 10) == 0) {
-    //                         valuesofstrttime[1] = "0" + valuesofstrttime[1].toString();
-    //                     }
-    //
-    //
-    //                 } else {
-    //                     valuesofstrttime[1] = "55";
-    //
-    //                 }
-    //                 valuesofstrttime[2] = "0" + valuesofstrttime[2].toString()
-    //                 endtime = valuesofstrttime[0] + ":" + valuesofstrttime[1] + ":" + valuesofstrttime[2]
-    //
-    //                 //console.log(valuesofstrttime[0] + " hd " + valuesofstrttime[1])
-    //             }
-    //
-    //             else{
-    //                 if(valuesofstrttime[1]==15){
-    //                     valuesofstrttime[0]+=1;
-    //                     valuesofstrttime[1]=55;
-    //
-    //                 }else if(valuesofstrttime[1]==5){
-    //                     valuesofstrttime[0]+=1;
-    //                     valuesofstrttime[1]=45;
-    //                 }else {
-    //                     valuesofstrttime[0]+=2;
-    //                     valuesofstrttime[1]=35;
-    //                 }
-    //                 valuesofstrttime[2] = "0" + valuesofstrttime[2].toString();
-    //                 endtime = valuesofstrttime[0] + ":" + valuesofstrttime[1] + ":" + valuesofstrttime[2]
-    //
-    //
-    //
-    //             }
-    //
-    //             $("#qendtime").append(
-    //                 $("<option>").attr({class: "tempoptionendtime", selected: true}).text(endtime)
-    //             )
-    //
-    //
-    //         })
-    //
-    //     }
-    // )
-
-
-
-
-
-
-
-
-
-     // $('#dataentry').submit(function() {
-    //     $.ajax({
-    //         type: 'POST',
-    //         url: "/AddInTheDatabase/",
-    //         data: $(this).serialize(),
-    //
-    //         success: function(data) {
-    //             alert(data)
-    //             if(data=="Succesfully entered in the database") {
-    //
-    //                 $('#dataentry').trigger("reset")
-    //
-    //
-    //             }
-    //
-    //         }
-    //     })
-    //     return false;
-    // });
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    // function removeendtime() {
-    //     $(".tempoptionendtime").remove();
-    // }
-
-
-
-        $("#qsemester").change(()=>{
+           $("#qsemester").change(()=>{
 
             RemoveCourses();
              RoomType = $("#qroomtype").val()
@@ -355,15 +196,13 @@ $(function () {
         $.ajax({
             type : "POST",
             url : "/AddInTheDatabase/add",
+            followAllRedirects: true,
             data : $(this).serialize(),
 
 
             success : function(data) {
 
-                alert(data.result)
-                if(data.token == 1){
-                    $('#dataentry').trigger("reset")
-                }
+                showalert(data)
             }
 
         })
@@ -371,6 +210,13 @@ $(function () {
         }
     )
 
+
+    function showalert(message){
+        alert(message.result)
+        if(message.token == 1){
+            $('#dataentry').trigger("reset")
+        }
+    }
 
 
 })

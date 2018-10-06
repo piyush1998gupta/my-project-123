@@ -1,29 +1,35 @@
 const route = require('express').Router()
-const controller = require('../Controller/AddDatabase')
+const controllerAdd = require('../Controller/AddDatabase')
 
 
 
 //get data of all the teachers
 route.get("/TeacherName",(req,res)=>{
-    controller.getallteachers(req.query.CourseName).then((data)=>{
+    controllerAdd.getallteachers(req.query.CourseName).then((data)=>{
         res.send(data)
     }).catch((err)=>{
         console.log(err)
     })
 })
+
+
+
 //get all the courses
 route.get("/CourseName",(req,res)=>{
-    controller.getallcourses(req.query.Semester,req.query.CourseType).then((data)=>{
+    controllerAdd.getallcourses(req.query.Semester,req.query.CourseType).then((data)=>{
 
         res.send(data)
     }).catch((err)=>{
         console.log(err)
     })
 })
+
+
+
 
 //get all the Room Numbers
 route.get("/RoomNumber",(req,res)=>{
-    controller.getallrooms(req.query.RoomType).then((data)=>{
+    controllerAdd.getallrooms(req.query.RoomType).then((data)=>{
         res.send(data)
     }).catch((err)=>{
         console.log(err)
@@ -31,7 +37,7 @@ route.get("/RoomNumber",(req,res)=>{
 })
 
 
-
+// adding in the  database
 
 route.post("/add",async (req,res)=>{
 
@@ -64,7 +70,7 @@ route.post("/add",async (req,res)=>{
             //console.log(qclassgroup)
             //console.log(req.body)
 
-            Message = await controller.addinthedatabase(Semester,qclassgroup,Day,StartTime,EndTime,RoomId,TeacherId,CourseCode,CourseType).then((result)=>{
+            Message = await controllerAdd.addinthedatabase(Semester,qclassgroup,Day,StartTime,EndTime,RoomId,TeacherId,CourseCode,CourseType).then((result)=>{
                 return result;
             }).catch((err)=>{
                 return err;
@@ -80,7 +86,7 @@ route.post("/add",async (req,res)=>{
     }
     else{
 
-       Message = await controller.addinthedatabase(Semester,req.body.qclassgroup,Day,StartTime,EndTime,RoomId,TeacherId,CourseCode,CourseType).then((result)=>{
+       Message = await controllerAdd.addinthedatabase(Semester,req.body.qclassgroup,Day,StartTime,EndTime,RoomId,TeacherId,CourseCode,CourseType).then((result)=>{
             return result
         }).catch((err)=>{
             return err
@@ -105,41 +111,7 @@ route.post("/add",async (req,res)=>{
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 })
-
 
 
 
