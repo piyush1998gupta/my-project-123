@@ -3,11 +3,11 @@ const controller = require("./AddDatabase")
 
 
 async function getallvalues(queryobject){
-    console.log(queryobject)
+    // console.log(queryobject)
     var SemeseterSymbol,SemesterValue,RoomTypeSymbol,RoomTypeValue,RoomNoSymbol,RoomNoValue,DaySymbol,DayValue,ClassGroupSymbol,ClassGroupvalue,StartTimeSymbol,StartTimeValue,EndTimeSymbol,EndTimeValue,CourseNameSymbol,CourseNameValue,TeacherNameSymbol,TeacherNameValue
     var equalto = "="
     var notequalto = "<>"
-
+    var NewClassGroupValue
     if(queryobject.semester=="All"){
         SemeseterSymbol=notequalto
         SemesterValue="a"
@@ -54,7 +54,7 @@ async function getallvalues(queryobject){
         StartTimeSymbol=">="
         StartTimeValue='09:00:00'
     }else{
-        StartTimeSymbol=equalto
+        StartTimeSymbol=">="
         StartTimeValue=queryobject.starttime
     }
 
@@ -62,10 +62,10 @@ async function getallvalues(queryobject){
         EndTimeSymbol= '<='
         EndTimeValue='17:00:00'
     }else{
-        EndTimeSymbol=equalto
+        EndTimeSymbol="<"
         EndTimeValue=queryobject.endtime
     }
-    if(queryobject.coursename=="All"){
+    if(queryobject.coursename=="<="){
         CourseNameSymbol=notequalto
         CourseNameValue="a"
     }else{
@@ -81,6 +81,37 @@ async function getallvalues(queryobject){
         TeacherNameValue=queryobject.teachername
     }
 
+    //classgroupmessage in Query For Tut And Labs
+    if(ClassGroupvalue==queryobject.classgroup){
+        NewClassGroupValue= " MasterCseTable.Group_ = '"+ClassGroupvalue + "' "
+    }
+    var classgroupsplit = ClassGroupvalue.split("-")
+    //classgroupmessage in query for Lecture
+    if(classgroupsplit[1]=="123" || classgroupsplit[1]=="456" || classgroupsplit[1]=="789" || classgroupsplit[1]=="111213"){
+        var newclassgroup =[]
+        if (classgroupsplit[1]=="111213"){
+            newclassgroup[0]=11,newclassgroup[1]=12,newclassgroup[2]=13
+        }else {
+
+            newclassgroup = classgroupsplit[1].split("")
+
+        }
+         var newclassgroupvalue = [classgroupsplit[0]+"-"+newclassgroup[0],classgroupsplit[0]+"-"+newclassgroup[1],classgroupsplit[0]+"-"+newclassgroup[2]]
+
+        NewClassGroupValue = "( MasterCseTable.Group_  = '"+newclassgroupvalue[0]+"' OR MasterCseTable.Group_ = '"+ newclassgroupvalue[1]+"' OR MasterCseTable.Group_ = '" + newclassgroupvalue[2] + "' )";
+
+
+
+    }
+
+    // classgroupmessage in  query if it is not mention
+        if(ClassGroupvalue=='a'){
+            NewClassGroupValue = " MasterCseTable.Group_ <> 'a' "
+        }
+
+
+
+
     return new Promise (async (resolve,reject)=>{
         await connection.then((conn)=>{
 
@@ -90,11 +121,11 @@ async function getallvalues(queryobject){
                 "`AddCourse`JOIN`AddTeacher`JOIN `AddRoom`WHERE MasterCseTable.CourseCode=AddCourse.CourseCode AND " +
                 "MasterCseTable.TeacherId=AddTeacher.TeacherId AND MasterCseTable.RoomId=AddRoom.RoomId AND" +
                 " MasterCseTable.Semester " + SemeseterSymbol +" '"+SemesterValue   + "' AND " +
-                " MasterCseTable.Group_ "+ ClassGroupSymbol + " '" + ClassGroupvalue + "' AND " +
+                    NewClassGroupValue+" AND " +
                 " MasterCseTable.CourseType "+RoomTypeSymbol + " '" + RoomTypeValue + "' AND " +
                 " MasterCseTable.Day "+ DaySymbol + " '" + DayValue +"' AND " +
                 " MasterCseTable.StartTime "+ StartTimeSymbol + " '" + StartTimeValue + "' AND " +
-                " MasterCseTable.EndTime "+ EndTimeSymbol + " '" + EndTimeValue + "' AND " +
+                " MasterCseTable.StartTime "+ EndTimeSymbol + " '" + EndTimeValue + "' AND " +
                 " MasterCseTable.RoomId " + RoomNoSymbol + " '" + RoomNoValue + "' AND " +
                 " AddCourse.CourseName " + CourseNameSymbol + " '" + CourseNameValue + "' AND " +
                 " AddTeacher.TeacherName " + TeacherNameSymbol + " '"+ TeacherNameValue + "' "

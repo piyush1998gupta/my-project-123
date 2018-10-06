@@ -25,10 +25,13 @@ route.post("/Query",(req,res)=>{
         teachername : TeacherName
     }
 // console.log(query1)
-    controllerquery.getallvalues(query1)
+    controllerquery.getallvalues(query1).then((result)=>{
+      //  console.log(result)
+       res.send(result);
+    })
 
 
-    res.send("his")
+
 })
 
 module.exports=route;
