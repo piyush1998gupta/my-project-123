@@ -148,7 +148,7 @@ $(()=> {
                 success: function (data) {
                     $("#mainresult").removeAttr("hidden");
 
-
+                        // console.log(data)
                     // console.log(data[0].TeacherId)
 
 
@@ -206,10 +206,10 @@ $(()=> {
         var checkinglecture = $("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno)
         // console.log("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno)
             if (checkinglecture.length==0) {
-                console.log("if")
+                // console.log("if")
                 $("." + day + "  ." + timeslot).append(
                     `<div class="${classsemester}${coursecode}${teacherid}${roomno}">
-                <div class="${classgroup.substring(0,1)}">Group :- ${classgroup}</div>
+                <div class="${classgroup.substring(0,1)}"> Group :-${classsemester}-${classgroup}</div>
                 <div class="${roomno}">Room :- ${roomno} </div> 
                 <div class="${teachername}">Teacher :- ${teachername}</div>
                 <div class="${coursename}">CourseName :- ${coursename}</div>
@@ -219,18 +219,12 @@ $(()=> {
                 )
 
             }else {
-                console.log("else")
+                // console.log("else")
                 $("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno+" ."+classgroup.substring(0,1)).append(classgroup.split("-")[1])
             }
     }
 
-    $("#testing").click(()=>{
-        console.log("clicked")
-        var vals= 234
-        $(".parent").append(
-            `<div>   ${vals} </div>  `
-        )
-    })
+
 
     }
 

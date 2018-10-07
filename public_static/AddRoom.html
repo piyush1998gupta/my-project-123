@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD ROOM</title>
+    <script src="jquery.js"></script>
+    <script src="AddRoom.js"></script>
+
+</head>
+<body>
+        <form id="addroom">
+            Select Branch :- <select id="roombranch" name="roombranch" >
+                <option selected>CSE</option>
+                <option>IT</option>
+                <option>ECE</option>
+                <option>EEE</option>
+                <option>MEC</option>
+            </select> <br>
+            Enter Room Nmber : <input type="text" name="roomnumber" required pattern="[0-9]{3}">
+            <br>
+
+          Select Roomtype :-  <select id="roomtype" name="roomtype" placeholder="Enter Valid 3 digit Room Number">
+                <option selected>Lecture</option>
+                <option>Lab</option>
+            </select><br>
+            <input type="submit" id="add" value=" ADD ROOM ">
+
+        </form>
+
+        <button id="showroom" >SHOW ROOMS </button>
+        <button id="deleteroom"> DELETE ROOM </button>
+
+    <table id="mainresult" border=1 width="50%" >
+        <tr>
+            <td>RoomId </td>
+            <td>Room Branch</td>
+            <td> Room Type </td>
+        <td> CheckBox</td>
+        </tr>
+    </table>
+
+
+
+
+</body>
+</html>
