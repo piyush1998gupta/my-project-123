@@ -204,9 +204,9 @@ $(()=> {
                 var timeslot = t[0]+""+t[1]+t[2]
                 var classtypesymbol = classtype.substring(0,3)
         var checkinglecture = $("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno)
-        console.log("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno)
+        // console.log("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno)
             if (checkinglecture.length==0) {
-                // console.log("if")
+                console.log("if")
                 $("." + day + "  ." + timeslot).append(
                     `<div class="${classsemester}${coursecode}${teacherid}${roomno}">
                 <div class="${classgroup.substring(0,1)}">Group :- ${classgroup}</div>
@@ -217,8 +217,9 @@ $(()=> {
                 
                 </div> <br>`
                 )
+
             }else {
-                // console.log("else")
+                console.log("else")
                 $("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno+" ."+classgroup.substring(0,1)).append(classgroup.split("-")[1])
             }
     }
