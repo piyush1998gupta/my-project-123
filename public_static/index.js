@@ -11,6 +11,34 @@ $(()=> {
         GetQueryRooms(Branch, RoomType)
         GetQueryCourses(Branch, RoomType, Semester)
         GetQueryTeachers(Branch, CourseName)
+
+
+        $("#delete").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "/FetchingQuery/QueryDelete",
+                data: {
+                    sbranch: $("#sbranch").val(),
+                    ssemester: $("#ssemester").val(),
+                    sroomtype: $("#sroomtype").val(),
+                    sroomno: $("#sroomno").val(),
+                    sclassgroup: $("#sclassgroup").val(),
+                    sstarttime: $("#sstarttime").val(),
+                    sendtime: $("#sendtime").val(),
+                    sday:$("#sday").val(),
+                    scoursename: $("#scoursename").val(),
+                    steachername: $("#steachername").val()
+                },
+                success: function (data) {
+                    console.log(data)
+                    alert(data)
+                }
+            })
+        })
+
+
+
+
         $("#sbranch").change(() => {
                 RemoveRoomNo()
                 RemoveCourses()
@@ -70,7 +98,7 @@ $(()=> {
                 // console.log(Teachers)
 
                 for (i = 0; i < Teachers.length; i++) {
-                    $("#steachename").append(
+                    $("#steachername").append(
                         $("<option>").attr("class", "tempoptionteachername").text(Teachers[i].TeacherName)
                     )
                 }
@@ -227,6 +255,12 @@ $(()=> {
 
 
     }
+
+
+
+
+
+
 
 )
 
