@@ -69,7 +69,7 @@ async function getallvalues(queryobject){
         CourseNameSymbol=notequalto
         CourseNameValue="a"
     }else{
-        CourseNameSymbol=notequalto
+        CourseNameSymbol=equalto
         CourseNameValue=queryobject.coursename
     }
 
@@ -116,13 +116,13 @@ async function getallvalues(queryobject){
         await connection.then((conn)=>{
 
             var MainQuery = " SELECT MasterCseTable.Semester,MasterCseTable.Group_,MasterCseTable.Day, MasterCseTable.StartTime," +
-                "MasterCseTable.EndTime ,MasterCseTable.RoomId,MasterCseTable.CourseType, MasterCseTable.CourseCode," +
+                "MasterCseTable.EndTime ,MasterCseTable.RoomId,MasterCseTable.ClassType, MasterCseTable.CourseCode," +
                 "MasterCseTable.TeacherId,AddTeacher.TeacherName,AddCourse.CourseName FROM `MasterCseTable` JOIN " +
                 "`AddCourse`JOIN`AddTeacher`JOIN `AddRoom`WHERE MasterCseTable.CourseCode=AddCourse.CourseCode AND " +
                 "MasterCseTable.TeacherId=AddTeacher.TeacherId AND MasterCseTable.RoomId=AddRoom.RoomId AND" +
                 " MasterCseTable.Semester " + SemeseterSymbol +" '"+SemesterValue   + "' AND " +
                     NewClassGroupValue+" AND " +
-                " MasterCseTable.CourseType "+RoomTypeSymbol + " '" + RoomTypeValue + "' AND " +
+                " MasterCseTable.ClassType "+RoomTypeSymbol + " '" + RoomTypeValue + "' AND " +
                 " MasterCseTable.Day "+ DaySymbol + " '" + DayValue +"' AND " +
                 " MasterCseTable.StartTime "+ StartTimeSymbol + " '" + StartTimeValue + "' AND " +
                 " MasterCseTable.StartTime "+ EndTimeSymbol + " '" + EndTimeValue + "' AND " +
@@ -132,7 +132,7 @@ async function getallvalues(queryobject){
 
 
 
-            // console.log(MainQuery);
+            console.log(MainQuery);
 
 
 
