@@ -65,7 +65,7 @@ async function getallvalues(queryobject){
         EndTimeSymbol="<"
         EndTimeValue=queryobject.endtime
     }
-    if(queryobject.coursename=="<="){
+    if(queryobject.coursename=="All"){
         CourseNameSymbol=notequalto
         CourseNameValue="a"
     }else{
@@ -116,8 +116,8 @@ async function getallvalues(queryobject){
         await connection.then((conn)=>{
 
             var MainQuery = " SELECT MasterCseTable.Semester,MasterCseTable.Group_,MasterCseTable.Day, MasterCseTable.StartTime," +
-                "MasterCseTable.EndTime ,MasterCseTable.RoomId,MasterCseTable.ClassType, MasterCseTable.CourseCode," +
-                "MasterCseTable.TeacherId,AddTeacher.TeacherName,AddCourse.CourseName FROM `MasterCseTable` JOIN " +
+                "MasterCseTable.EndTime ,MasterCseTable.RoomId,MasterCseTable.ClassType, MasterCseTable.CourseCode,MasterCseTable.TeacherId" +
+                ",AddTeacher.TeacherName,AddCourse.CourseName FROM `MasterCseTable` JOIN " +
                 "`AddCourse`JOIN`AddTeacher`JOIN `AddRoom`WHERE MasterCseTable.CourseCode=AddCourse.CourseCode AND " +
                 "MasterCseTable.TeacherId=AddTeacher.TeacherId AND MasterCseTable.RoomId=AddRoom.RoomId AND" +
                 " MasterCseTable.Semester " + SemeseterSymbol +" '"+SemesterValue   + "' AND " +
@@ -132,7 +132,7 @@ async function getallvalues(queryobject){
 
 
 
-            console.log(MainQuery);
+            // console.log(MainQuery);
 
 
 

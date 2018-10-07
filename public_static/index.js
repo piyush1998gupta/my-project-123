@@ -149,21 +149,11 @@ $(()=> {
                     $("#mainresult").removeAttr("hidden");
 
 
-                    console.log(data)
-                    // for(i=0;i<data.length;i++) {
-                    //
-                    //     st=(data[i].Start_Time).split(":");
-                    //     strttime= "."+st[0]+st[1]+st[2];
-                    //     console.log(strttime)
-                    //     $("#tablecaption").text("Time Table Of ALOK Sir");
-                    //     var  day = "."+data[i].Day
-                    //
-                    //     $(day).children(strttime).append($("<li>").html("Group : -" + data[i].Semester+" - "+ data[i].Group_+"<br/> Course:- "+data[i].CourseName +"\n" + "<br/> Room-Number :-"+data[i].RoomId+"<br/>Teacher :-"+ data[i].Teacher_Name+"<br/><br/>"))
-                    //
-                    //
-                    // }
-                    // console.log(data);
+                    // console.log(data[0].TeacherId)
 
+
+
+                        ShowTable(data)
 
                 }
             })
@@ -173,19 +163,24 @@ $(()=> {
         })
 
     function ShowTable (result){
+    // console.log(result)
+    //
             for(i=0;i<result.length;i++){
                 var resultobject = {
                      resultstarttime : result[i].StartTime,
                     resultendtime : result[i].EndTime,
                      resultclassgroup : result[i].Group_,
                      resultclasssemester : result[i].Semester,
-                    resultclassteacher : result[i].TeacherName,
+                    resultteachername : result[i].TeacherName,
                     resultcoursename : result[i].CourseName,
                     resultclasstype : result[i].ClassType,
                     resultday : result[i].Day,
-                    resultroomno : result[i].roomno
+                    resultroomno : result[i].RoomId,
+                    resultteacherid : result[i].TeacherId,
+                    resultcoursecode : result[i].CourseCode
 
                 }
+                // console.log(resultobject)
                 ShowEntry(resultobject)
             }
 
@@ -193,20 +188,38 @@ $(()=> {
 
 
     function ShowEntry(resultobject){
-            var starttime = resultobject.StartTime
-            var endtime = resultobject.EndTime
-            var classgroup = resultobject.Group_
-            var classsemester = resultobject.Semester
-            var classteacher = resultobject.TeacherName
-            var coursename = resultobject.CourseName
-            var classtype = resultobject.ClassType
-            var day = resultobject.Day
-            var roomno =resultobject.roomno
+            var starttime = resultobject.resultstarttime
+            var endtime = resultobject.resultendtime
+            var classgroup = resultobject.resultclassgroup
+            var classsemester = resultobject.resultclasssemester
+            var teachername = resultobject.resultteachername
+            var coursename = resultobject.resultcoursename
+            var classtype = resultobject.resultclasstype
+            var day = resultobject.resultday
+            var roomno =resultobject.resultroomno
+            var teacherid = resultobject.resultteacherid
+            var coursecode = resultobject.resultcoursecode
 
-            $(".parent").append(
-                `<div class="pract"> ${RoomNumber} </div> `
-
-            )
+            var t = starttime.split(":")
+                var timeslot = t[0]+""+t[1]+t[2]
+                var classtypesymbol = classtype.substring(0,3)
+        var checkinglecture = $("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno)
+        console.log("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno)
+            if (checkinglecture.length==0) {
+                console.log("if")
+                $("." + day + "  ." + timeslot).append(
+                    `<div class="${classsemester}${coursecode}${teacherid}${roomno}">
+                <div class="${classgroup.substring(0,1)}">Group :- ${classgroup}</div>
+                <div class="${roomno}">Room :- ${roomno} </div> 
+                <div class="${teachername}">Teacher :- ${teachername}</div>
+                <div class="${coursename}">CourseName :- ${coursename}</div>
+                <div class="${classtype}"> ( ${classtypesymbol} )</div>
+                </div> <br>`
+                )
+            }else {
+                console.log("else")
+                $("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno+" ."+classgroup.substring(0,1)).append(classgroup.split("-")[1])
+            }
     }
 
     $("#testing").click(()=>{
@@ -216,7 +229,6 @@ $(()=> {
             `<div>   ${vals} </div>  `
         )
     })
-
 
     }
 
