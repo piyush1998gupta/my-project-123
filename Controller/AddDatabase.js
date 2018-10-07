@@ -120,7 +120,56 @@ async function getteacherid(teachername){
 }
 
 
+
+async function checkteacherisavailable(TeacherId,StartTime,EndTime,Day){
+
+    return  new Promise (async(resolve,reject)=>{
+        await connection.then((conn)=>{
+            var Query = "select * from MasterCseTable where TeacherId = ? And(( StartTime >= ? And StartTime< ? ) OR ( ? Between StartTime And EndTime And ClassType='lab' ))And Day = ? "
+
+            conn.query(Query,[TeacherId,StartTime,EndTime,StartTime,Day]).then(([row,field])=>{
+                resolve(row)
+
+            }).catch((err)=>{
+                reject (err)
+            })
+        })
+    })
+
+}
+
+
+
+
+async function checkroomisavailable(RoomId,StartTime,EndTime,Day){
+
+    return  new Promise (async(resolve,reject)=>{
+        await connection.then((conn)=>{
+            var Query = "select * from MasterCseTable where RoomId = ? And(( StartTime >= ? And StartTime< ? ) OR ( ? Between StartTime And EndTime And ClassType='lab' ))And Day = ? "
+
+            conn.query(Query,[RoomId,StartTime,EndTime,StartTime,Day]).then(([row,field])=>{
+                // console.log(row)
+                resolve(row)
+
+            }).catch((err)=>{
+                reject (err)
+            })
+        })
+    })
+
+
+
+
+}
+
+
+// checkroomisavailable(912,'10:05:00','11:45:00','Friday')
+
+
+
+
+//console.log(checkteacherisavailable("Neetu","01:15:00","02:05:00","Monday"))
 module.exports={
-getallcourses,getallrooms,getallteachers,addinthedatabase,getcoursecode,getteacherid
+getallcourses,getallrooms,getallteachers,addinthedatabase,getcoursecode,getteacherid,checkteacherisavailable,checkroomisavailable
 }
 

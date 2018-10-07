@@ -89,7 +89,7 @@ $(function () {
         $.get('/AddInTheDatabase/TeacherName',{
             CourseName : coursename
         } , (Teachers) => {
-            console.log(Teachers)
+            // console.log(Teachers)
 
             for (i = 0; i < Teachers.length; i++) {
                 $("#qteachename").append(
@@ -192,7 +192,7 @@ $(function () {
 
 
     $("#dataentry").submit(function () {
-        console.log("after click submit ")
+        // console.log("after click submit ")
         $.ajax({
             type : "POST",
             url : "/AddInTheDatabase/add",
