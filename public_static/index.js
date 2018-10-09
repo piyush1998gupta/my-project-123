@@ -295,54 +295,7 @@ $(()=> {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-        // console.log("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno)
-    //         if (checkinglecture.length==0) {
-    //             // console.log("if")
-    //             $("." + day + "  ." + timeslot).append(
-    //                 `<div class="${classsemester}${coursecode}${teacherid}${roomno}">`+
-    //                 (queryask.semester=='All'||queryask.classgroup=='All'
-    //                     ?
-    //                     `<div class="${classgroup.substring(0,1)}"> Group :-`+
-    //                     (queryask.semester=='All' ?
-    //                     `${classsemester}-`:'')+
-    //                     (queryask.classgroup=='All'?`${classgroup}`:'')+
-    //
-    //                         `</div>`
-    //
-    //                 :'')
-    //
-    //
-    //
-    //
-    //                 +
-    //
-    //                 (queryask.roomno=='All' ? `<div class="${roomno}">Room :- ${roomno} </div>`:'')+
-    //                 (queryask.teachername=='All'?`<div class="${teachername}">Teacher :- ${teachername}</div>`:'')+
-    //                 (queryask.coursename=='All'?`<div class="${coursename}">CourseName :- ${coursename}</div>`:'')+
-    //                 (queryask.roomtype=='All'?`<div class="${classtype}"> ( ${classtypesymbol} )</div>`:'')
-    //
-    //           + ` </div> <br>`
-    //             )
-    //
-    //         }else {
-    //             // console.log("else")
-    //             $("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno+" ."+classgroup.substring(0,1)).append(
-    //                 (queryask.classgroup=='All'? classgroup.split("-")[1] :'')
-    //             )
-    //         }
-    }
+        }
 
 
 

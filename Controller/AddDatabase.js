@@ -65,16 +65,23 @@ async function addinthedatabase(Semester,Group,Day,StartTime,EndTime,RoomId,Teac
 //     console.log(TeacherId)
 //     console.log(CourseCode)
 //     console.log(ClassType)
-
+    var SemesterType
+if(Semester%2==0)
+{
+    SemesterType='EVEN'
+}else{
+    SemesterType='ODD'
+}
 
     return new Promise(async (resolve,reject)=>{
         await connection.then(async (conn)=>{
-            var que = "INSERT INTO `MasterCseTable`(`Semester`, `Group_`, `Day`, `StartTime`, `EndTime`, `RoomId`, `TeacherId`, `CourseCode`,`ClassType`) VALUES (?,?,?,?,?,?,?,?,?)"
-            conn.query(que,[Semester,Group,Day,StartTime,EndTime,RoomId,TeacherId,CourseCode,ClassType]).then(([row,field])=>{
-
+            var que = "INSERT INTO `MasterCseTable`(`Semester`, `Group_`, `Day`, `StartTime`, `EndTime`, `RoomId`, `TeacherId`, `CourseCode`,`ClassType`,`SemesterType`) VALUES (?,?,?,?,?,?,?,?,?,?)"
+            conn.query(que,[Semester,Group,Day,StartTime,EndTime,RoomId,TeacherId,CourseCode,ClassType,SemesterType]).then(([row,field])=>{
+                // console.log(row)
                 resolve ("Successfully inserted In The Database");
 
             }).catch((err)=>{
+                // console.log(err)
                 reject ("Duplicate Entry");
             })
         })
