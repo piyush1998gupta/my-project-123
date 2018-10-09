@@ -14,6 +14,6 @@ app.use("/AddRoom",require("./Router/AddRoomRoute"))
 
 
 
-app.listen(9092,(err)=>{
+app.listen(9090,(err)=>{
     console.log("Server Started")
 })

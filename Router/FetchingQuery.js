@@ -93,7 +93,7 @@ route.post("/QuerySearch",(req,res)=>{
 // console.log(query1)
     controllerquery.getallvalues(query1).then((result)=>{
       //  console.log(result)
-       res.send(result);
+       res.send([result,query1]);
     })
 
 

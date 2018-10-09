@@ -1,6 +1,6 @@
 $(()=> {
         var RoomType, Semester, Branch, RoomNumber, ClassGroup, Day, StartTime, EndTime, CourseName
-
+        var queryask=[]
         RemoveRoomNo()
         RemoveCourses()
         RemoveTeacherName()
@@ -166,7 +166,9 @@ $(()=> {
 
 
             $(".clr").text("");
-
+            $(".clr").removeAttr("colspan")
+            $(".clr").removeAttr("hidden")
+            $(".clr").removeAttr("rowspan")
 
             $.ajax({
                 type: 'POST',
@@ -179,9 +181,9 @@ $(()=> {
                         // console.log(data)
                     // console.log(data[0].TeacherId)
 
+                        queryask = data[1]
 
-
-                        ShowTable(data)
+                        ShowTable(data[0])
 
                 }
             })
@@ -191,7 +193,8 @@ $(()=> {
         })
 
     function ShowTable (result){
-    // console.log(result)
+
+
     //
             for(i=0;i<result.length;i++){
                 var resultobject = {
@@ -231,25 +234,114 @@ $(()=> {
             var t = starttime.split(":")
                 var timeslot = t[0]+""+t[1]+t[2]
                 var classtypesymbol = classtype.substring(0,3)
+        console.log(classtypesymbol)
         var checkinglecture = $("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno)
-        // console.log("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno)
-            if (checkinglecture.length==0) {
-                // console.log("if")
-                $("." + day + "  ." + timeslot).append(
-                    `<div class="${classsemester}${coursecode}${teacherid}${roomno}">
-                <div class="${classgroup.substring(0,1)}"> Group :-${classsemester}-${classgroup}</div>
-                <div class="${roomno}">Room :- ${roomno} </div> 
-                <div class="${teachername}">Teacher :- ${teachername}</div>
-                <div class="${coursename}">CourseName :- ${coursename}</div>
-                <div class="${classtype}"> ( ${classtypesymbol} )</div>
-                
-                </div> <br>`
-                )
 
-            }else {
-                // console.log("else")
-                $("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno+" ."+classgroup.substring(0,1)).append(classgroup.split("-")[1])
+
+        if(classtype=="Lab" || classtype=="Tutorial") {
+            if (classtype == "Lab") {
+                // console.log("." + day + " ."+classgroup.split("-")[1]+ " ."+timeslot)
+
+                $("." + day + " ." + classgroup.split("-")[1] + " ." + timeslot).append(
+                    displaydynamicdata()
+                ).attr("colspan", "2").next().attr("hidden", "true")
+            } else {
+                $("." + day + " ." + classgroup.split("-")[1] + " ." + timeslot).append(
+                    displaydynamicdata()
+                )
             }
+        }else
+        // if  (classtype=="Lecture")
+        {
+            var classgroupnumber = classgroup.split("-")[1]
+            var groupentryrow
+
+
+
+            //".lect class wo wali hai jisme lecture ki classes jayengi
+            if( checkinglecture.length==0) {
+                $("." + day + " .lect" + " ." + timeslot).append(
+                    displaydynamicdata()
+                ).attr("rowspan","3")
+            }
+            else{
+                $("." + day + "  ."+ classgroup.split("-")[1] + " ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno+" ."+classgroup.substring(0,1)).append(classgroup.split("-")[1])
+
+                $("."+day+" .comblect ."+timeslot).attr("hidden",true)
+            }
+
+        }
+
+
+        function displaydynamicdata(){
+            return  `<div class="${classsemester}${coursecode}${teacherid}${roomno}">`+
+                            (queryask.semester=='All'||queryask.classgroup=='All'
+                                ?
+                                `<div class="${classgroup.substring(0,1)}"> Group :-`+
+                                (queryask.semester=='All' ?
+                                `${classsemester}-`:'')+
+                                (queryask.classgroup=='All'?`${classgroup}`:'')+
+
+                                    `</div>`
+                            :'')
+                            +
+                            (queryask.roomno=='All' ? `<div class="${roomno}">Room :- ${roomno} </div>`:'')+
+                            (queryask.teachername=='All'?`<div class="${teachername}">Teacher :- ${teachername}</div>`:'')+
+                            (queryask.coursename=='All'?`<div class="${coursename}">CourseName :- ${coursename}</div>`:'')+
+                            (queryask.roomtype=='All'?`<div class="${classtype}"> ( ${classtypesymbol} )</div>`:'')
+
+                      + ` </div> <br>`
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // console.log("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno)
+    //         if (checkinglecture.length==0) {
+    //             // console.log("if")
+    //             $("." + day + "  ." + timeslot).append(
+    //                 `<div class="${classsemester}${coursecode}${teacherid}${roomno}">`+
+    //                 (queryask.semester=='All'||queryask.classgroup=='All'
+    //                     ?
+    //                     `<div class="${classgroup.substring(0,1)}"> Group :-`+
+    //                     (queryask.semester=='All' ?
+    //                     `${classsemester}-`:'')+
+    //                     (queryask.classgroup=='All'?`${classgroup}`:'')+
+    //
+    //                         `</div>`
+    //
+    //                 :'')
+    //
+    //
+    //
+    //
+    //                 +
+    //
+    //                 (queryask.roomno=='All' ? `<div class="${roomno}">Room :- ${roomno} </div>`:'')+
+    //                 (queryask.teachername=='All'?`<div class="${teachername}">Teacher :- ${teachername}</div>`:'')+
+    //                 (queryask.coursename=='All'?`<div class="${coursename}">CourseName :- ${coursename}</div>`:'')+
+    //                 (queryask.roomtype=='All'?`<div class="${classtype}"> ( ${classtypesymbol} )</div>`:'')
+    //
+    //           + ` </div> <br>`
+    //             )
+    //
+    //         }else {
+    //             // console.log("else")
+    //             $("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno+" ."+classgroup.substring(0,1)).append(
+    //                 (queryask.classgroup=='All'? classgroup.split("-")[1] :'')
+    //             )
+    //         }
     }
 
 

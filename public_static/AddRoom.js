@@ -72,11 +72,34 @@ $(()=>{
             `<tr class="clr" > <td > ${roomnumber}</td>
                <td>${roombranch}</td>
                <td>${roomtype}</td>
-               <td><input type="checkbox" ></td>
+               <td><input type="checkbox" class="checkroom" onclick=checkrooms($(this))></td>
                
                </tr>`
         )
     }
 
+
+    function checkrooms(event){
+        console.log(event)
+        console.log("clicked")
+        // if (event).is(":checked")==true){
+        //     console.log("notchecked")
+        //     $(this).attr("checked",false)
+        // }else{
+        //     $(this).attr("checked",true)
+        //     console.log("checked")
+        // }
+        // return false
+    }
+    var i=1
+
+
+
+
+    $(".parent").append(
+        `<div> hi </div> <div>`
+        +
+        (i=1 ? `<div>bye</div>`:'')+`jksd</div>`
+    )
 
 })
