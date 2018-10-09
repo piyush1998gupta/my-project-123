@@ -132,9 +132,9 @@ async function checkteacherisavailable(TeacherId,StartTime,EndTime,Day){
 
     return  new Promise (async(resolve,reject)=>{
         await connection.then((conn)=>{
-            var Query = "select * from MasterCseTable where TeacherId = ? And(( StartTime >= ? And StartTime< ? ) OR ( ? Between StartTime And EndTime And ClassType='lab' ))And Day = ? "
+            var Query = "select * from MasterCseTable where TeacherId = ? And(( StartTime >= ? And StartTime< ? ) OR (  StartTime < ? And EndTime > ? And ClassType='lab' ))And Day = ? "
 
-            conn.query(Query,[TeacherId,StartTime,EndTime,StartTime,Day]).then(([row,field])=>{
+            conn.query(Query,[TeacherId,StartTime,EndTime,StartTime,StartTime,Day]).then(([row,field])=>{
                 resolve(row)
 
             }).catch((err)=>{
@@ -152,9 +152,9 @@ async function checkroomisavailable(RoomId,StartTime,EndTime,Day){
 
     return  new Promise (async(resolve,reject)=>{
         await connection.then((conn)=>{
-            var Query = "select * from MasterCseTable where RoomId = ? And(( StartTime >= ? And StartTime< ? ) OR ( ? Between StartTime And EndTime And ClassType='lab' ))And Day = ? "
+            var Query = "select * from MasterCseTable where RoomId = ? And(( StartTime >= ? And StartTime< ? ) OR ( StartTime < ? And EndTime > ? And ClassType='lab' ))And Day = ? "
 
-            conn.query(Query,[RoomId,StartTime,EndTime,StartTime,Day]).then(([row,field])=>{
+            conn.query(Query,[RoomId,StartTime,EndTime,StartTime,StartTime,Day]).then(([row,field])=>{
                 // console.log(row)
                 resolve(row)
 

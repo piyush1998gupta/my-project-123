@@ -1,4 +1,5 @@
 $(()=> {
+    console.log("hi")
         var RoomType, Semester, Branch, RoomNumber, ClassGroup, Day, StartTime, EndTime, CourseName
         var queryask=[]
         RemoveRoomNo()
@@ -265,7 +266,8 @@ $(()=> {
                 ).attr("rowspan","3")
             }
             else{
-                $("." + day + "  ."+ classgroup.split("-")[1] + " ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno+" ."+classgroup.substring(0,1)).append(classgroup.split("-")[1])
+                console.log("." + day + " .lect" +  "  ." + " ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno+" ."+classgroup.substring(0,1))
+                $("." + day + " .lect" +  "  ." +timeslot+" ."+classsemester+coursecode+teacherid+roomno+" ."+classgroup.substring(0,1)).append(classgroup.split("-")[1])
 
                 $("."+day+" .comblect ."+timeslot).attr("hidden",true)
             }
