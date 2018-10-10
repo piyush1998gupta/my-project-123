@@ -209,52 +209,65 @@ $(()=> {
                 if(queryask.classgroup=='All' && queryask.teachername=='All'&&queryask.roomno=='All'){
                     console.log("Different tables")
 
-                    createTable("5C123")
-                    createTable("5C456")
-                    createTable("5C789")
-                    createTable("5C111213")
+                    createTablewhencombinegroup("5C123")
+                    createTablewhencombinegroup("5C456")
+                    createTablewhencombinegroup("5C789")
+                    createTablewhencombinegroup("5C111213")
+
+                    fordisplayingqueriesofcombinedgroup(result,tableid)
 
 
 
-
-
-                }else {
+                }else if((queryask.classgroup=='C-123' || queryask.classgroup=='C-456' || queryask.classgroup=='C-789' || queryask.classgroup=='C-111213') &&  queryask.teachername=='All'&&queryask.roomno=='All' ){
                     console.log("one table")
                     tableid= "classgroup"+"teacher"+queryask.roomno
                     console.log(tableid)
-                    createTable(tableid)
+                    createTablewhencombinegroup(tableid)
+                    fordisplayingqueriesofcombinedgroup(result,tableid)
+                }else{
+                    tableid='uniquetabledesignforeach'
+                    uniquetabledesignforsinglegroup(tableid)
+
+                    fordisplayingqueriesofsinglegroup(result,tableid)
                 }
-        if(queryask.day=='All'){
-            $(".dayshow").removeAttr("hidden")
-        }else{
-            $("."+queryask.day).removeAttr("hidden")
-        }
-        console.log(result)
+
+
 
     //
-            for(i=0;i<result.length;i++){
-                var resultobject = {
-                     resultstarttime : result[i].StartTime,
-                    resultendtime : result[i].EndTime,
-                     resultclassgroup : result[i].Group_,
-                     resultclasssemester : result[i].Semester,
-                    resultteachername : result[i].TeacherName,
-                    resultcoursename : result[i].CourseName,
-                    resultclasstype : result[i].ClassType,
-                    resultday : result[i].Day,
-                    resultroomno : result[i].RoomId,
-                    resultteacherid : result[i].TeacherId,
-                    resultcoursecode : result[i].CourseCode
 
-                }
-                // console.log(resultobject)
-                ShowEntry(resultobject,tableid)
-            }
 
     }
 
 
-    function ShowEntry(resultobject,tableid){
+    function fordisplayingqueriesofcombinedgroup(result,tableid) {
+        if(queryask.day=='All'){
+            $(".dayshow").removeAttr("hidden")
+        }else{
+            $("."+queryask.day).removeAttr("hidden")
+
+        }
+        for(i=0;i<result.length;i++){
+            var resultobject = {
+                resultstarttime : result[i].StartTime,
+                resultendtime : result[i].EndTime,
+                resultclassgroup : result[i].Group_,
+                resultclasssemester : result[i].Semester,
+                resultteachername : result[i].TeacherName,
+                resultcoursename : result[i].CourseName,
+                resultclasstype : result[i].ClassType,
+                resultday : result[i].Day,
+                resultroomno : result[i].RoomId,
+                resultteacherid : result[i].TeacherId,
+                resultcoursecode : result[i].CourseCode
+
+            }
+            // console.log(resultobject)
+            ShowEntryforcombinedgroups(resultobject,tableid)
+        }
+    }
+
+
+    function ShowEntryforcombinedgroups(resultobject,tableid){
             var starttime = resultobject.resultstarttime
             var endtime = resultobject.resultendtime
             var classgroup = resultobject.resultclassgroup
@@ -353,14 +366,14 @@ $(()=> {
 
         function displaydynamiclabdata(){
             return  `<div class="${classsemester}${coursecode}${teacherid}${roomno}">`+
-                (queryask.semester=='All'||queryask.classgroup=='All'
+                (queryask.semester=='All'
                     ?
                     `<span class="${classgroup.substring(0,1)}"> `+
                     (queryask.semester=='All' ?
                         `${classsemester}`:'')+
-                    (queryask.classgroup=='All'?`-${classgroup},`:""
+                    `${classgroup},`
 
-                    )+
+                    +
 
                     `</span>`
                     :'')
@@ -378,12 +391,7 @@ $(()=> {
         }
 
 
-
-
-
-
-
-    function createTable(tableid){
+    function createTablewhencombinegroup(tableid){
         $("#mainqueryresult").append(
             `
             <font size="1" face="Courier New" >
@@ -609,12 +617,222 @@ $(()=> {
     }
 
 
+        // singlegroup means one group c1 or c2 or c3 or c4 or c5
+    function uniquetabledesignforsinglegroup(tableid){
+        $("#mainqueryresult").append(`
+         <font size="1" face="Courier New" >
+    <table id="${tableid}" width="100%" height="100%" border="2">
+    <caption id="tablecaption"></caption>
+   
+    <thead >
+    <td></td>
+    <td>9:15-10:05</td>
+    <td>10:05-10:55</td>
+    <td>10:55-11:45</td>
+    <td>11:45-12:35</td>
+    <td>1:15-2:05</td>
+    <td>2:05-2:55</td>
+    <td>2:55-3:45</td>
+    <td>3:45-4:35</td>
+
+    </thead>
+     <tbody>
+    <tr class="Monday dayshow">
+    <td class="">Monday</td>
+    <td class="091500 clr"></td>
+    <td class="100500 clr"></td>
+    <td class="105500 clr"></td>
+    <td class="114500 clr"></td>
+    <td class="131500 clr"></td>
+    <td class="140500 clr"></td>
+    <td class="145500 clr"></td>
+    <td class="153500 clr"></td>
+    </tr>
+
+    <tr class="Tuesday dayshow">
+    <td>Tuesday</td>
+    <td class="091500 clr"></td>
+    <td class="100500 clr"></td>
+    <td class="105500 clr"></td>
+    <td class="114500 clr" ></td>
+
+    <td class="131500 clr"></td>
+    <td class="140500 clr"></td>
+    <td class="145500 clr"></td>
+    <td class="153500 clr"></td>
+    </tr>
+    <tr class="Wednesday dayshow">
+    <td>Wednesday</td>
+    <td class="091500 clr"></td>
+    <td class="100500 clr"></td>
+    <td class="105500 clr"></td>
+    <td class="114500 clr"></td>
+
+    <td class="131500 clr"></td>
+    <td class="140500 clr"></td>
+    <td class="145500 clr"></td>
+    <td class="153500 clr"></td>
+    </tr>
+    <tr class="Thursday dayshow">
+    <td>Thursday</td>
+    <td class="091500 clr"></td>
+    <td class="100500 clr"></td>
+    <td class="105500 clr"></td>
+    <td class="114500 clr"></td>
+
+    <td class="131500 clr"></td>
+    <td class="140500 clr"></td>
+    <td class="145500 clr"></td>
+    <td class="153500 clr"></td>
+    </tr>
+    <tr class="Friday dayshow">
+    <td>friday</td>
+    <td class="091500 clr" ></td>
+    <td class="100500 clr" ></td>
+    <td class="105500 clr"></td>
+    <td class="114500 clr"></td>
+
+    <td class="131500 clr"></td>
+    <td class="140500 clr"></td>
+    <td class="145500 clr"></td>
+    <td class="153500 clr"></td>
+    </tr>
+    </tbody>
+    </table>
+    </font>
+    
+
+        
+        `)
+
+    }
+
+    function fordisplayingqueriesofsinglegroup(result,tableid) {
+        if(queryask.day=='All'){
+            $(".dayshow").removeAttr("hidden")
+        }else{
+            $("."+queryask.day).removeAttr("hidden")
+
+        }
+        for(i=0;i<result.length;i++){
+            var resultobject = {
+                resultstarttime : result[i].StartTime,
+                resultendtime : result[i].EndTime,
+                resultclassgroup : result[i].Group_,
+                resultclasssemester : result[i].Semester,
+                resultteachername : result[i].TeacherName,
+                resultcoursename : result[i].CourseName,
+                resultclasstype : result[i].ClassType,
+                resultday : result[i].Day,
+                resultroomno : result[i].RoomId,
+                resultteacherid : result[i].TeacherId,
+                resultcoursecode : result[i].CourseCode
+
+            }
+            // console.log(resultobject)
+            ShowEntryforsinglegroups(resultobject,tableid)
+        }
+    }
+
+
+
+    function ShowEntryforsinglegroups(resultobject,tableid){
+        var starttime = resultobject.resultstarttime
+        var endtime = resultobject.resultendtime
+        var classgroup = resultobject.resultclassgroup
+        var classsemester = resultobject.resultclasssemester
+        var teachername = resultobject.resultteachername
+        var coursename = resultobject.resultcoursename
+        var classtype = resultobject.resultclasstype
+        var day = resultobject.resultday
+        var roomno =resultobject.resultroomno
+        var teacherid = resultobject.resultteacherid
+        var coursecode = resultobject.resultcoursecode
+
+        var t = starttime.split(":")
+        var timeslot = t[0]+""+t[1]+t[2]
+        var classtypesymbol = classtype.substring(0,3)
+        // console.log(classtypesymbol)
+        var checkinglecture = $("#"+tableid+" ." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno)
+
+        // console.log("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno)
+
+        if(classtype=="Lecture") {
+
+            if (checkinglecture.length == 0) {
+                // console.log("if")
+                $("#" + tableid + " ." + day + "  ." + timeslot).append(
+                    displaydynamiclecturedata()
+                )
+
+            } else {
+                // console.log("else")
+                $("#" + tableid + " ." + day + "  ." + timeslot + " ." + classsemester + coursecode + teacherid + roomno + " ." + classgroup.substring(0, 1)).append(classgroup.split("-")[1])
+            }
+        }else{
+            if(classtype=="Lab"){
+                $("#" + tableid + " ." + day + "  ." + timeslot).append(
+                    displaydynamiclabdata()
+                ).attr("colspan","2").next().attr("hidden","true")
+            }else{
+                $("#" + tableid + " ." + day + "  ." + timeslot).append(
+                    displaydynamiclabdata()
+                )
+            }
+        }
 
 
 
 
+        function displaydynamiclecturedata(){
+            return  `<div class="${classsemester}${coursecode}${teacherid}${roomno}">`+
+                (queryask.semester=='All'||queryask.classgroup=='All'
+                    ?
+                    `<div class="${classgroup.substring(0,1)}"> `+
+                    (queryask.semester=='All' ?
+                        `${classsemester}`:'')+
+                    (queryask.classgroup=='All'?`-${classgroup}`:
+                            (classtype=='Lab'||classtype=='Tutorial'?`${classgroup} ${console.log("jaskakjja")}`:'')
+                    )+
+
+                    `</div>`
+                    :'')
+                +
 
 
+                (queryask.coursename=='All'?`<span class="${coursecode}">${coursename}</span>`:'')+
+                (queryask.roomtype=='All'?`<span class="${classtype}"> (${classtypesymbol})</span>`:'') +
+                (queryask.teachername=='All'?`<div class="${teacherid}"> ${teachername}</div>`:'')+
+                (queryask.roomno=='All' ? `<div class="${roomno}"> ${roomno} </div>`:'')+
+
+                ` </div> <br>`
+        }
+
+        function displaydynamiclabdata(){
+            return  `<div class="${classsemester}${coursecode}${teacherid}${roomno}">`+
+                (queryask.semester=='All'
+                    ?
+                    `<span class="${classgroup.substring(0,1)}"> `+
+                    (queryask.semester=='All' ?
+                        `${classsemester}`:'')+
+                    `${classgroup},`
+
+                    +
+
+                    `</span>`
+                    :'')
+                +
+
+
+                (queryask.coursename=='All'?`<span class="${coursecode}">${coursename}</span>`:'')+
+                (queryask.roomtype=='All'?`<span class="${classtype}"> (${classtypesymbol}),</span>`:'') +
+                (queryask.teachername=='All'?`<span class="${teacherid}"> ${teachername},</span>`:'')+
+                (queryask.roomno=='All' ? `<span class="${roomno},"> ${roomno} </span>`:'')+
+
+                ` </div> <br>`
+        }
+
+    }
 
 
 
