@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e529dcae-d560-4814-835c-cbbe9978ef80" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/DB/DBServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/DB/DBServer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public_static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public_static/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/index.js" afterDir="false" />
     </list>
@@ -46,13 +45,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="3056" />
-          <entry key="js" value="23018" />
+          <entry key="js" value="23383" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="3118" />
-          <entry key="JavaScript" value="22956" />
+          <entry key="JavaScript" value="23321" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -64,8 +63,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public_static/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="214" column="42" selection-start-line="214" selection-start-column="42" selection-end-line="214" selection-end-column="42" />
+            <state relative-caret-position="117">
+              <caret line="325" column="29" selection-start-line="325" selection-start-column="29" selection-end-line="325" selection-end-column="29" />
               <folding>
                 <element signature="e#527#1363#0" />
                 <element signature="e#1404#1875#0" />
@@ -78,9 +77,6 @@
                 <element signature="e#4910#4960#0" />
                 <element signature="e#4995#5051#0" />
                 <element signature="e#5090#5151#0" />
-                <element signature="e#6870#12039#0" />
-                <element signature="e#7864#8385#0" />
-                <element signature="e#11049#17832#0" />
               </folding>
             </state>
           </provider>
@@ -116,12 +112,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_static/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2510">
-              <caret line="601" column="11" lean-forward="true" selection-start-line="391" selection-start-column="4" selection-end-line="601" selection-end-column="11" />
+            <state relative-caret-position="258">
+              <caret line="603" lean-forward="true" selection-start-line="390" selection-end-line="603" />
               <folding>
                 <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#9;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#font#0;n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -295,12 +290,12 @@
       <workItem from="1538928717738" duration="20115000" />
       <workItem from="1538971332733" duration="4049000" />
       <workItem from="1538981132327" duration="4397000" />
-      <workItem from="1539016412612" duration="33293000" />
+      <workItem from="1539016412612" duration="38812000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176250000" />
+    <option name="totallyTimeSpent" value="181769000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -315,7 +310,7 @@
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24944155" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24944155" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -327,7 +322,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952693" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.39151713" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.10277325" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -492,25 +487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/AddInTheDatabase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2510">
-          <caret line="601" column="11" lean-forward="true" selection-start-line="391" selection-start-column="4" selection-end-line="601" selection-end-column="11" />
-          <folding>
-            <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#9;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#font#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Router/FetchingQuery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33">
@@ -518,10 +494,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="603" lean-forward="true" selection-start-line="390" selection-end-line="603" />
+          <folding>
+            <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#9;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/AddInTheDatabase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public_static/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="214" column="42" selection-start-line="214" selection-start-column="42" selection-end-line="214" selection-end-column="42" />
+        <state relative-caret-position="117">
+          <caret line="325" column="29" selection-start-line="325" selection-start-column="29" selection-end-line="325" selection-end-column="29" />
           <folding>
             <element signature="e#527#1363#0" />
             <element signature="e#1404#1875#0" />
@@ -534,9 +528,6 @@
             <element signature="e#4910#4960#0" />
             <element signature="e#4995#5051#0" />
             <element signature="e#5090#5151#0" />
-            <element signature="e#6870#12039#0" />
-            <element signature="e#7864#8385#0" />
-            <element signature="e#11049#17832#0" />
           </folding>
         </state>
       </provider>

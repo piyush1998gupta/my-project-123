@@ -170,6 +170,7 @@ $(()=> {
             $(".clr").removeAttr("colspan")
             $(".clr").removeAttr("hidden")
             $(".clr").removeAttr("rowspan")
+            $("#mainqueryresult").text("")
 
             console.log(!$(".dayshow").attr("hidden"))
 
@@ -202,18 +203,23 @@ $(()=> {
 
     function ShowTable (result){
        // console.log(queryask.day)
-                if(queryask.day=='All'){
-                    $(".dayshow").removeAttr("hidden")
-                }else{
-                    $("."+queryask.day).removeAttr("hidden")
-                }
+
 
                 var tableid
                 if(queryask.classgroup=='All' && queryask.teachername=='All'&&queryask.roomno=='All'){
                     console.log("Different tables")
                 }else {
                     console.log("one table")
+                    tableid= "classgroup"+"teacher"+queryask.roomno
+                    console.log(tableid)
+                    createTable(tableid)
                 }
+        if(queryask.day=='All'){
+            $(".dayshow").removeAttr("hidden")
+        }else{
+            $("."+queryask.day).removeAttr("hidden")
+        }
+        console.log(result)
 
     //
             for(i=0;i<result.length;i++){
@@ -232,13 +238,13 @@ $(()=> {
 
                 }
                 // console.log(resultobject)
-                ShowEntry(resultobject)
+                ShowEntry(resultobject,tableid)
             }
 
     }
 
 
-    function ShowEntry(resultobject){
+    function ShowEntry(resultobject,tableid){
             var starttime = resultobject.resultstarttime
             var endtime = resultobject.resultendtime
             var classgroup = resultobject.resultclassgroup
@@ -260,18 +266,20 @@ $(()=> {
 
         if(classtype=="Lab" || classtype=="Tutorial") {
             if (classtype == "Lab") {
+                console.log("lab")
                 // console.log("." + day + " ."+classgroup.split("-")[1]+ " ."+timeslot)
 
-                $("." + day + " ." + classgroup.split("-")[1] + " ." + timeslot).append(
+                $("#"+tableid+" ." + day + " ." + classgroup.split("-")[1] + " ." + timeslot).append(
                     displaydynamicdata()
                 ).attr("colspan", "2").next().attr("hidden", "true")
             } else {
-                $("." + day + " ." + classgroup.split("-")[1] + " ." + timeslot).append(
+                $("#"+tableid+" ." + day + " ." + classgroup.split("-")[1] + " ." + timeslot).append(
                     displaydynamicdata()
                 )
             }
         }else
         // if  (classtype=="Lecture")
+
         {
             var classgroupnumber = classgroup.split("-")[1]
             var groupentryrow
@@ -280,17 +288,17 @@ $(()=> {
 
             //".lect class wo wali hai jisme lecture ki classes jayengi
             if( checkinglecture.length==0) {
-                $("." + day + " .lect" + " ." + timeslot).append(
+                $("#"+tableid+" ." + day + " .lect" + " ." + timeslot).append(
                     displaydynamicdata()
                 ).attr("rowspan","3")
             }
             else{
                 // console.log("." + day + " .lect" +  "  ." + " ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno+" ."+classgroup.substring(0,1))
-                $("." + day + " .lect" +  "  ." +timeslot+" ."+classsemester+coursecode+teacherid+roomno+" ."+classgroup.substring(0,1)).append((queryask.classgroup=='All'?`${classgroup.split("-")[1]}`:'')+
+                $("#"+tableid+" ." + day + " .lect" +  "  ." +timeslot+" ."+classsemester+coursecode+teacherid+roomno+" ."+classgroup.substring(0,1)).append((queryask.classgroup=='All'?`${classgroup.split("-")[1]}`:'')+
 
                     `</div>`)
 
-                $("."+day+" .comblect ."+timeslot).attr("hidden",true)
+                $("#"+tableid+" ."+day+" .comblect ."+timeslot).attr("hidden",true)
             }
 
         }
@@ -303,7 +311,9 @@ $(()=> {
                                 `<div class="${classgroup.substring(0,1)}"> `+
                                 (queryask.semester=='All' ?
                                 `${classsemester}`:'')+
-                                (queryask.classgroup=='All'?`-${classgroup}`:'')+
+                                (queryask.classgroup=='All'?`-${classgroup}`:
+                                        (classtype=='Lab'||classtype=='Tutorial'?`${classgroup} ${console.log("jaskakjja")}`:'')
+                                )+
 
                                     `</div>`
                             :'')
