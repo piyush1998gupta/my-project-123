@@ -171,6 +171,13 @@ $(()=> {
             $(".clr").removeAttr("hidden")
             $(".clr").removeAttr("rowspan")
 
+            console.log(!$(".dayshow").attr("hidden"))
+
+                if (!$(".dayshow").attr("hidden")) {
+                    $(".dayshow").attr("hidden", "true")
+                }
+
+
             $.ajax({
                 type: 'POST',
                 url: "/FetchingQuery/QuerySearch",
@@ -194,7 +201,19 @@ $(()=> {
         })
 
     function ShowTable (result){
+       // console.log(queryask.day)
+                if(queryask.day=='All'){
+                    $(".dayshow").removeAttr("hidden")
+                }else{
+                    $("."+queryask.day).removeAttr("hidden")
+                }
 
+                var tableid
+                if(queryask.classgroup=='All' && queryask.teachername=='All'&&queryask.roomno=='All'){
+                    console.log("Different tables")
+                }else {
+                    console.log("one table")
+                }
 
     //
             for(i=0;i<result.length;i++){
@@ -235,7 +254,7 @@ $(()=> {
             var t = starttime.split(":")
                 var timeslot = t[0]+""+t[1]+t[2]
                 var classtypesymbol = classtype.substring(0,3)
-        console.log(classtypesymbol)
+        // console.log(classtypesymbol)
         var checkinglecture = $("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno)
 
 
@@ -266,8 +285,10 @@ $(()=> {
                 ).attr("rowspan","3")
             }
             else{
-                console.log("." + day + " .lect" +  "  ." + " ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno+" ."+classgroup.substring(0,1))
-                $("." + day + " .lect" +  "  ." +timeslot+" ."+classsemester+coursecode+teacherid+roomno+" ."+classgroup.substring(0,1)).append(classgroup.split("-")[1])
+                // console.log("." + day + " .lect" +  "  ." + " ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno+" ."+classgroup.substring(0,1))
+                $("." + day + " .lect" +  "  ." +timeslot+" ."+classsemester+coursecode+teacherid+roomno+" ."+classgroup.substring(0,1)).append((queryask.classgroup=='All'?`${classgroup.split("-")[1]}`:'')+
+
+                    `</div>`)
 
                 $("."+day+" .comblect ."+timeslot).attr("hidden",true)
             }
@@ -279,20 +300,22 @@ $(()=> {
             return  `<div class="${classsemester}${coursecode}${teacherid}${roomno}">`+
                             (queryask.semester=='All'||queryask.classgroup=='All'
                                 ?
-                                `<div class="${classgroup.substring(0,1)}"> Group :-`+
+                                `<div class="${classgroup.substring(0,1)}"> `+
                                 (queryask.semester=='All' ?
-                                `${classsemester}-`:'')+
-                                (queryask.classgroup=='All'?`${classgroup}`:'')+
+                                `${classsemester}`:'')+
+                                (queryask.classgroup=='All'?`-${classgroup}`:'')+
 
                                     `</div>`
                             :'')
                             +
-                            (queryask.roomno=='All' ? `<div class="${roomno}">Room :- ${roomno} </div>`:'')+
-                            (queryask.teachername=='All'?`<div class="${teachername}">Teacher :- ${teachername}</div>`:'')+
-                            (queryask.coursename=='All'?`<div class="${coursename}">CourseName :- ${coursename}</div>`:'')+
-                            (queryask.roomtype=='All'?`<div class="${classtype}"> ( ${classtypesymbol} )</div>`:'')
 
-                      + ` </div> <br>`
+
+                            (queryask.coursename=='All'?`<span class="${coursename}">${coursename}</span>`:'')+
+                            (queryask.roomtype=='All'?`<span class="${classtype}"> (${classtypesymbol})</span>`:'') +
+                            (queryask.teachername=='All'?`<div class="${teachername}"> ${teachername}</div>`:'')+
+                            (queryask.roomno=='All' ? `<div class="${roomno}"> ${roomno} </div>`:'')+
+
+                      ` </div> <br>`
         }
 
 
@@ -300,7 +323,222 @@ $(()=> {
         }
 
 
+    function createTable(tableid){
+        $("#mainqueryresult").append(
+            `
+            <font size="1" face="Courier New" >
 
+    <table id="${tableid}" border="1" height="100%" width="100%" >
+
+        <thead >
+        <td></td>
+        <td>9:15-10:05</td>
+        <td>10:05-10:55</td>
+        <td>10:55-11:45</td>
+        <td>11:45-12:35</td>
+        <td>1:15-2:05</td>
+        <td>2:05-2:55</td>
+        <td>2:55-3:45</td>
+        <td>3:45-4:35</td>
+        </thead>
+
+        <tbody class="Monday dayshow" hidden >
+
+        <tr class="1 4 7 11 lect" border="0" >
+            <td rowspan="3">Monday</td>
+            <td class="091500 clr "></td>
+            <td class="100500 clr"></td>
+            <td class="105500 clr"></td>
+            <td class="114500 clr "></td>
+
+            <td class="131500 clr"></td>
+            <td class="140500 clr"></td>
+            <td class="145500 clr"></td>
+            <td class="153500 clr"></td>
+        </tr>
+        <tr class="2 5 8 12 comblect">
+
+            <td class="091500 clr"></td>
+            <td class="100500 clr"></td>
+            <td class="105500 clr"></td>
+            <td class="114500 clr"></td>
+
+            <td class="131500 clr"></td>
+            <td class="140500 clr"></td>
+            <td class="145500 clr"></td>
+            <td class="153500 clr"></td>
+        </tr>
+        <tr class="3 6 9 13 comblect">
+
+            <td class="091500 clr "></td>
+            <td class="100500 clr"></td>
+            <td class="105500 clr"></td>
+            <td class="114500 clr "></td>
+
+            <td class="131500 clr"></td>
+            <td class="140500 clr"></td>
+            <td class="145500 clr"></td>
+            <td class="153500 clr"></td>
+        </tr>
+
+       </tbody>
+        <tbody class="Tuesday dayshow" hidden >
+        <tr class="1 4 7 11 lect">
+            <td rowspan="3">Tuesday</td>
+            <td class="091500 clr"></td>
+            <td class="100500 clr"></td>
+            <td class="105500 clr"></td>
+            <td class="114500 clr "></td>
+
+            <td class="131500 clr"></td>
+            <td class="140500 clr"></td>
+            <td class="145500 clr"></td>
+            <td class="153500 clr"></td>
+        </tr>
+        <tr class="2 5 8 12 comblect">
+
+            <td class="091500 clr"></td>
+            <td class="100500 clr"></td>
+            <td class="105500 clr"></td>
+            <td class="114500 clr"></td>
+
+            <td class="131500 clr"></td>
+            <td class="140500 clr"></td>
+            <td class="145500 clr"></td>
+            <td class="153500 clr"></td>
+        </tr>
+        <tr class="3 6 9 13 comblect">
+
+            <td class="091500 clr "></td>
+            <td class="100500 clr"></td>
+            <td class="105500 clr"></td>
+            <td class="114500 clr "></td>
+
+            <td class="131500 clr"></td>
+            <td class="140500 clr"></td>
+            <td class="145500 clr"></td>
+            <td class="153500 clr"></td>
+        </tr>
+        </tbody>
+        <tbody class="Wednesday dayshow"  hidden>
+        <tr class="1 4 7 11 lect">
+            <td rowspan="3">Wednesday</td>
+            <td class="091500 clr "></td>
+            <td class="100500 clr"></td>
+            <td class="105500 clr"></td>
+            <td class="114500 clr "></td>
+
+            <td class="131500 clr"></td>
+            <td class="140500 clr"></td>
+            <td class="145500 clr"></td>
+            <td class="153500 clr"></td>
+        </tr>
+        <tr class="2 5 8 12 comblect">
+
+            <td class="091500 clr"></td>
+            <td class="100500 clr"></td>
+            <td class="105500 clr"></td>
+            <td class="114500 clr"></td>
+
+            <td class="131500 clr"></td>
+            <td class="140500 clr"></td>
+            <td class="145500 clr"></td>
+            <td class="153500 clr"></td>
+        </tr>
+        <tr class="3 6 9 13 comblect">
+
+            <td class="091500 clr " ></td>
+            <td class="100500 clr"></td>
+            <td class="105500 clr"></td>
+            <td class="114500 clr " ></td>
+
+            <td class="131500 clr"></td>
+            <td class="140500 clr"></td>
+            <td class="145500 clr"></td>
+            <td class="153500 clr"></td>
+        </tr>
+        </tbody>
+        <tbody class="Thursday dayshow"  hidden>
+        <tr class="1 4 7 11 lect">
+            <td rowspan="3">Thursday</td>
+            <td class="091500 clr "></td>
+            <td class="100500 clr"></td>
+            <td class="105500 clr"></td>
+            <td class="114500 clr "></td>
+
+            <td class="131500 clr"></td>
+            <td class="140500 clr"></td>
+            <td class="145500 clr"></td>
+            <td class="153500 clr"></td>
+        </tr>
+        <tr class="2 5 8 12 comblect">
+
+            <td class="091500 clr"></td>
+            <td class="100500 clr"></td>
+            <td class="105500 clr"></td>
+            <td class="114500 clr"></td>
+
+            <td class="131500 clr"></td>
+            <td class="140500 clr"></td>
+            <td class="145500 clr"></td>
+            <td class="153500 clr"></td>
+        </tr>
+        <tr class="3 6 9 13 comblect">
+
+            <td class="091500 clr " ></td>
+            <td class="100500 clr"></td>
+            <td class="105500 clr"></td>
+            <td class="114500 clr "></td>
+
+            <td class="131500 clr"></td>
+            <td class="140500 clr"></td>
+            <td class="145500 clr"></td>
+            <td class="153500 clr"></td>
+        </tr>
+        </tbody>
+        <tbody class="Friday dayshow" hidden >
+        <tr class="1 4 7 11 lect">
+            <td rowspan="3">Friday</td>
+            <td class="091500 clr "></td>
+            <td class="100500 clr"></td>
+            <td class="105500 clr"></td>
+            <td class="114500 clr "></td>
+
+            <td class="131500 clr"></td>
+            <td class="140500 clr"></td>
+            <td class="145500 clr"></td>
+            <td class="153500 clr"></td>
+        </tr>
+        <tr class="2 5 8 12 comblect">
+
+            <td class="091500 clr"></td>
+            <td class="100500 clr"> </td>
+            <td class="105500 clr"></td>
+            <td class="114500 clr"></td>
+
+            <td class="131500 clr"></td>
+            <td class="140500 clr"></td>
+            <td class="145500 clr"></td>
+            <td class="153500 clr"></td>
+        </tr>
+        <tr class=" 3 6 9 13 comblect">
+
+            <td class="091500 clr "></td>
+            <td class="100500 clr"></td>
+            <td class="105500 clr"></td>
+            <td class="114500 clr " ></td>
+
+            <td class="131500 clr"></td>
+            <td class="140500 clr"></td>
+            <td class="145500 clr"></td>
+            <td class="153500 clr" ></td>
+        </tr>
+        </tbody>
+
+    </table>
+    </font>
+            `
+        )
     }
 
 
@@ -309,5 +547,13 @@ $(()=> {
 
 
 
-)
 
+
+
+
+
+
+
+
+
+})

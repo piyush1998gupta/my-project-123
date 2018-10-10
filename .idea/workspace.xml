@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e529dcae-d560-4814-835c-cbbe9978ef80" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Controller/AddDatabase.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/AddDatabase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/DBServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/DB/DBServer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public_static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public_static/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,28 +31,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="30" />
-          <entry key="js" value="126" />
+          <entry key="html" value="31" />
+          <entry key="js" value="129" />
           <entry key="json" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="30" />
+          <entry key="HTML" value="31" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="126" />
+          <entry key="JavaScript" value="129" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="2929" />
-          <entry key="js" value="22305" />
+          <entry key="html" value="3056" />
+          <entry key="js" value="23018" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2991" />
-          <entry key="JavaScript" value="22243" />
+          <entry key="HTML" value="3118" />
+          <entry key="JavaScript" value="22956" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -62,23 +61,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public_static/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-903">
-              <caret line="212" lean-forward="true" selection-start-line="212" selection-end-line="212" />
+            <state relative-caret-position="426">
+              <caret line="214" column="42" selection-start-line="214" selection-start-column="42" selection-end-line="214" selection-end-column="42" />
               <folding>
+                <element signature="e#527#1363#0" />
+                <element signature="e#1404#1875#0" />
+                <element signature="e#1923#2280#0" />
+                <element signature="e#2320#2750#0" />
+                <element signature="e#2792#2974#0" />
+                <element signature="e#3032#3546#0" />
+                <element signature="e#3612#4250#0" />
+                <element signature="e#4302#4875#0" />
+                <element signature="e#4910#4960#0" />
+                <element signature="e#4995#5051#0" />
+                <element signature="e#5090#5151#0" />
+                <element signature="e#6870#12039#0" />
                 <element signature="e#7864#8385#0" />
+                <element signature="e#11049#17832#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Controller/AddDatabase.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_static/AddInTheDatabase.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="156" column="65" selection-start-line="156" selection-start-column="65" selection-end-line="156" selection-end-column="65" />
+            <state relative-caret-position="386">
+              <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DB/DBServer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -95,8 +116,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_static/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4823">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="2510">
+              <caret line="601" column="11" lean-forward="true" selection-start-line="391" selection-start-column="4" selection-end-line="601" selection-end-column="11" />
+              <folding>
+                <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#9;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#font#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Router/FetchingQuery.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="33">
+              <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
             </state>
           </provider>
         </entry>
@@ -118,7 +153,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/DB/dbserver.js" />
-        <option value="$PROJECT_DIR$/DB/DBServer.js" />
         <option value="$PROJECT_DIR$/ms.js" />
         <option value="$PROJECT_DIR$/public_static/querypage.js" />
         <option value="$PROJECT_DIR$/Router/FetchingData.js" />
@@ -139,9 +173,10 @@
         <option value="$PROJECT_DIR$/public_static/table.html" />
         <option value="$PROJECT_DIR$/public_static/table.js" />
         <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/public_static/index.js" />
-        <option value="$PROJECT_DIR$/public_static/index.html" />
         <option value="$PROJECT_DIR$/Controller/AddDatabase.js" />
+        <option value="$PROJECT_DIR$/DB/DBServer.js" />
+        <option value="$PROJECT_DIR$/public_static/index.html" />
+        <option value="$PROJECT_DIR$/public_static/index.js" />
       </list>
     </option>
   </component>
@@ -183,6 +218,11 @@
               <item name="CollegeProjectTimeTable" type="b2602c69:ProjectViewProjectNode" />
               <item name="CollegeProjectTimeTable" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CollegeProjectTimeTable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CollegeProjectTimeTable" type="462c0819:PsiDirectoryNode" />
+              <item name="DB" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CollegeProjectTimeTable" type="b2602c69:ProjectViewProjectNode" />
@@ -255,12 +295,12 @@
       <workItem from="1538928717738" duration="20115000" />
       <workItem from="1538971332733" duration="4049000" />
       <workItem from="1538981132327" duration="4397000" />
-      <workItem from="1539016412612" duration="25467000" />
+      <workItem from="1539016412612" duration="33293000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168424000" />
+    <option name="totallyTimeSpent" value="176250000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -273,8 +313,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24944155" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24944155" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -286,7 +327,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952693" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.39151713" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.39151713" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -342,20 +383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DB/DBServer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/AddInTheDatabase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controller/AddRooms_Courses_Teacher.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -388,13 +415,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
           <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/MainQueryFetch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
@@ -444,27 +464,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/index.html">
+    <entry file="file://$PROJECT_DIR$/Controller/AddDatabase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4823">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Router/FetchingQuery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="95" column="31" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-903">
-          <caret line="212" lean-forward="true" selection-start-line="212" selection-end-line="212" />
-          <folding>
-            <element signature="e#7864#8385#0" />
-          </folding>
+        <state relative-caret-position="497">
+          <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
         </state>
       </provider>
     </entry>
@@ -475,10 +478,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/AddDatabase.js">
+    <entry file="file://$PROJECT_DIR$/DB/DBServer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="156" column="65" selection-start-line="156" selection-start-column="65" selection-end-line="156" selection-end-column="65" />
+        <state relative-caret-position="90">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/MainQueryFetch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-212">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/AddInTheDatabase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2510">
+          <caret line="601" column="11" lean-forward="true" selection-start-line="391" selection-start-column="4" selection-end-line="601" selection-end-column="11" />
+          <folding>
+            <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#9;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#font#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Router/FetchingQuery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="214" column="42" selection-start-line="214" selection-start-column="42" selection-end-line="214" selection-end-column="42" />
+          <folding>
+            <element signature="e#527#1363#0" />
+            <element signature="e#1404#1875#0" />
+            <element signature="e#1923#2280#0" />
+            <element signature="e#2320#2750#0" />
+            <element signature="e#2792#2974#0" />
+            <element signature="e#3032#3546#0" />
+            <element signature="e#3612#4250#0" />
+            <element signature="e#4302#4875#0" />
+            <element signature="e#4910#4960#0" />
+            <element signature="e#4995#5051#0" />
+            <element signature="e#5090#5151#0" />
+            <element signature="e#6870#12039#0" />
+            <element signature="e#7864#8385#0" />
+            <element signature="e#11049#17832#0" />
+          </folding>
         </state>
       </provider>
     </entry>

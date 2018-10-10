@@ -188,7 +188,7 @@
 <div class="" style="padding-top:50px;margin-left: 20%;margin-right:20% ">
 <form id="dataquerys" style="padding:10%;padding-top:5%;background-color: lightgray">
     <div style="width:600px;margin-top: 20px;">
-    <label for="department" style="margin-">Department :-</label>
+    <label for="sbranch" style="margin-">Department :-</label>
     <select type="department" id="sbranch" name="sbranch" style=" display: inline-block;float:right;" required >
         <option selected >CSE</option>
         <!--<option >IT</option>-->
@@ -202,8 +202,9 @@
     </div>
     <br>
     <div style="width:600px;margin-top: 20px;">
-    <label for="Semester" style="margin-top:5px;">Semester :-</label> <select id="ssemester" type="Semester" style=" display: inline-block;float:right;" name="ssemester" >
-    <option selected value="All" >ALL SEMESTER</option>
+    <label for="ssemester" style="margin-top:5px;">Semester :-</label> <select id="ssemester" type="Semester" style=" display: inline-block;float:right;" name="ssemester" >
+    <!--<option selected value="All" >ALL SEMESTER</option>-->
+
     <!--<option>4</option>-->
     <option>5</option>
     <!--<option>6</option>-->
@@ -213,7 +214,7 @@
 </select></div><br>
 
 <div style="width:600px;margin-top: 20px;">
-<label for="RoomType" style="margin-top:5px;">RoomType :-</label> <select type="RoomType" id="sroomtype" style=" display: inline-block;float:right;" name="sroomtype" >
+<label for="sroomtype" style="margin-top:5px;">RoomType :-</label> <select type="RoomType" id="sroomtype" style=" display: inline-block;float:right;" name="sroomtype" >
     <option selected value="All"> All Room Type</option>
     <option > Tutorial</option>
     <option > Lecture</option>
@@ -221,12 +222,12 @@
 
 </select></div><br>
 <div style="width:600px;margin-top: 20px;">
-<label for="Roomno" style="margin-top:5px;">Room No. :-</label> <select type="Roomno" id="sroomno" style=" display: inline-block;float:right;" name="sroomno" >
+<label for="sRoomno" style="margin-top:5px;">Room No. :-</label> <select type="Roomno" id="sroomno" style=" display: inline-block;float:right;" name="sroomno" >
     <option selected value="All"> All Room</option>
 
 </select></div><br>
 <div style="width:600px;margin-top: 20px;">
-<label for="classgroup" style="margin-top:5px;"> Class-Group :-</label> <select type="classgroup" id="sclassgroup" style=" display: inline-block;float:right;" name="sclassgroup" >
+<label for="sclassgroup" style="margin-top:5px;"> Class-Group :-</label> <select type="classgroup" id="sclassgroup" style=" display: inline-block;float:right;" name="sclassgroup" >
     <option  selected value="All"> All Group</option>
     <option > C-123</option>
     <option > C-456</option>
@@ -247,7 +248,7 @@
 
 </select></div><br>
 <div style="width:600px;margin-top: 20px;">
-<label for="Day" style="margin-top:5px;">Day:-</label> <select type="Day" id="sday" name="sday" style=" display: inline-block;float:right;">
+<label for="sday" style="margin-top:5px;">Day:-</label> <select type="Day" id="sday" name="sday" style=" display: inline-block;float:right;">
     <option selected value="All"> All Days</option>
     <option >Monday</option>
     <option >Tuesday</option>
@@ -261,7 +262,7 @@
     <div style="width:600px;margin-top: 20px;">
            <b> Time-Slot :- </b>
   <div style="float:right">
-           <label for="starttime" style="margin-right:20px;margin-top:5px;">Start-time</label> <select type="starttime" id="sstarttime" name="sstarttime" style=" display: inline-block;float:right;">
+           <label for="sstarttime" style="margin-right:20px;margin-top:5px;">Start-time</label> <select type="starttime" id="sstarttime" name="sstarttime" style=" display: inline-block;float:right;">
     <option selected value="All"> ALL</option>
     <option class="strthide" > 09:15:00 </option>
     <option class="strthide" > 10:05:00 </option>
@@ -275,7 +276,7 @@
 </select></div></div>
 <div style="width:600px;margin-top: 20px;">
         <div style="float:right">
-<label for="endtime" style="margin-right:20px;margin-top:5px;">End-time</label>  <select type="endtime" id="sendtime" name="sendtime" style=" display: inline-block;float:right;">
+<label for="sendtime" style="margin-right:20px;margin-top:5px;">End-time</label>  <select type="endtime" id="sendtime" name="sendtime" style=" display: inline-block;float:right;">
     <option  selected value="All"> ALL </option>
     <option class="endhide" > 10:05:00 </option>
     <option class="endhide" > 10:55:00 </option>
@@ -289,17 +290,17 @@
 </select></div></div><br>
 
 <div style="width:600px;margin-top: 20px;">
-<label for="coursename" style="margin-top:5px;">    Course Name :-</label> <select type="coursename" id="scoursename" name="scoursename" style=" display: inline-block;float:right;">
+<label for="scoursename" style="margin-top:5px;">    Course Name :-</label> <select type="coursename" id="scoursename" name="scoursename" style=" display: inline-block;float:right;">
     <option  selected value="All"> All Course </option>
 </select></div><br>
 <div style="width:600px;margin-top: 20px;">
-<label for="teachername" style="margin-top:5px;">Teacher name :-</label> <select type="teachername" id="steachername" name="steachername" style=" display: inline-block;float:right;">
+<label for="steachername" style="margin-top:5px;">Teacher name :-</label> <select type="teachername" id="steachername" name="steachername" style=" display: inline-block;float:right;">
     <option  selected value="All"> All teacher</option>
 </select></div><br>
 <div style="margin-left:40%;">
     <input type="submit" id="sadd" placeholder="Add" class="btn-success btn" style="padding:10px;border-radius: 10%;">
 
-    <button id="testing " class="btn-primary btn" style="padding:10px;border-radius: 10%;"">Testing</button>
+    <button id="testing " class="btn-primary btn" style="padding:10px;border-radius: 10%;">Testing</button>
 </div>  
 </form>
 
@@ -385,12 +386,12 @@
 <!--</table>-->
 <!--</div>-->
 
-
+<div id="mainqueryresult"></div>
 
 
     <font size="1" face="Courier New" >
-    <table id="mainresult" border="1" height="100%" width="100%" >
 
+    <table id="mainresult" border="1" height="100%" width="100%" >
 
         <thead >
         <td></td>
@@ -404,9 +405,9 @@
         <td>3:45-4:35</td>
         </thead>
 
-        <tbody class="Monday dayshow" >
-        <font size="5" face="arial" color="red">
-        <tr class="Monday 1 4 7 11 lect" border="0" >
+        <tbody class="Monday dayshow" hidden >
+
+        <tr class="1 4 7 11 lect" border="0" >
             <td rowspan="3">Monday</td>
             <td class="091500 clr "></td>
             <td class="100500 clr"></td>
@@ -418,7 +419,7 @@
             <td class="145500 clr"></td>
             <td class="153500 clr"></td>
         </tr>
-        <tr class="Monday 2 5 8 12 comblect">
+        <tr class="2 5 8 12 comblect">
 
             <td class="091500 clr"></td>
             <td class="100500 clr"></td>
@@ -430,7 +431,7 @@
             <td class="145500 clr"></td>
             <td class="153500 clr"></td>
         </tr>
-        <tr class="Monday 3 6 9 13 comblect">
+        <tr class="3 6 9 13 comblect">
 
             <td class="091500 clr "></td>
             <td class="100500 clr"></td>
@@ -442,9 +443,10 @@
             <td class="145500 clr"></td>
             <td class="153500 clr"></td>
         </tr>
+
        </tbody>
-        <tbody class="Tuesday" >
-        <tr class="Tuesday 1 4 7 11 lect">
+        <tbody class="Tuesday dayshow" hidden >
+        <tr class="1 4 7 11 lect">
             <td rowspan="3">Tuesday</td>
             <td class="091500 clr"></td>
             <td class="100500 clr"></td>
@@ -456,7 +458,7 @@
             <td class="145500 clr"></td>
             <td class="153500 clr"></td>
         </tr>
-        <tr class="Tuesday 2 5 8 12 comblect">
+        <tr class="2 5 8 12 comblect">
 
             <td class="091500 clr"></td>
             <td class="100500 clr"></td>
@@ -468,7 +470,7 @@
             <td class="145500 clr"></td>
             <td class="153500 clr"></td>
         </tr>
-        <tr class="Tuesday 3 6 9 13 comblect">
+        <tr class="3 6 9 13 comblect">
 
             <td class="091500 clr "></td>
             <td class="100500 clr"></td>
@@ -481,8 +483,8 @@
             <td class="153500 clr"></td>
         </tr>
         </tbody>
-        <tbody class="Wednesday dayshow"  >
-        <tr class="Wednesday 1 4 7 11 lect">
+        <tbody class="Wednesday dayshow"  hidden>
+        <tr class="1 4 7 11 lect">
             <td rowspan="3">Wednesday</td>
             <td class="091500 clr "></td>
             <td class="100500 clr"></td>
@@ -494,7 +496,7 @@
             <td class="145500 clr"></td>
             <td class="153500 clr"></td>
         </tr>
-        <tr class="Wednesday 2 5 8 12 comblect">
+        <tr class="2 5 8 12 comblect">
 
             <td class="091500 clr"></td>
             <td class="100500 clr"></td>
@@ -506,7 +508,7 @@
             <td class="145500 clr"></td>
             <td class="153500 clr"></td>
         </tr>
-        <tr class="Wednesday 3 6 9 13 comblect">
+        <tr class="3 6 9 13 comblect">
 
             <td class="091500 clr " ></td>
             <td class="100500 clr"></td>
@@ -519,8 +521,8 @@
             <td class="153500 clr"></td>
         </tr>
         </tbody>
-        <tbody class="Thursday dayshow" >
-        <tr class="Thursday 1 4 7 11 lect">
+        <tbody class="Thursday dayshow"  hidden>
+        <tr class="1 4 7 11 lect">
             <td rowspan="3">Thursday</td>
             <td class="091500 clr "></td>
             <td class="100500 clr"></td>
@@ -532,7 +534,7 @@
             <td class="145500 clr"></td>
             <td class="153500 clr"></td>
         </tr>
-        <tr class="Thursday 2 5 8 12 comblect">
+        <tr class="2 5 8 12 comblect">
 
             <td class="091500 clr"></td>
             <td class="100500 clr"></td>
@@ -544,7 +546,7 @@
             <td class="145500 clr"></td>
             <td class="153500 clr"></td>
         </tr>
-        <tr class="Thursday 3 6 9 13 comblect">
+        <tr class="3 6 9 13 comblect">
 
             <td class="091500 clr " ></td>
             <td class="100500 clr"></td>
@@ -557,8 +559,8 @@
             <td class="153500 clr"></td>
         </tr>
         </tbody>
-        <tbody class="Friday dayshow" >
-        <tr class="Friday 1 4 7 11 lect">
+        <tbody class="Friday dayshow" hidden >
+        <tr class="1 4 7 11 lect">
             <td rowspan="3">Friday</td>
             <td class="091500 clr "></td>
             <td class="100500 clr"></td>
@@ -570,7 +572,7 @@
             <td class="145500 clr"></td>
             <td class="153500 clr"></td>
         </tr>
-        <tr class="Friday 2 5 8 12 comblect">
+        <tr class="2 5 8 12 comblect">
 
             <td class="091500 clr"></td>
             <td class="100500 clr"> </td>
@@ -582,7 +584,7 @@
             <td class="145500 clr"></td>
             <td class="153500 clr"></td>
         </tr>
-        <tr class="Friday 3 6 9 13 comblect">
+        <tr class=" 3 6 9 13 comblect">
 
             <td class="091500 clr "></td>
             <td class="100500 clr"></td>
@@ -597,7 +599,9 @@
         </tbody>
 
     </table>
+    </font>
 
-    </div>
+
+</div>
 </body>
 </html>
