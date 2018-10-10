@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e529dcae-d560-4814-835c-cbbe9978ef80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Controller/AddCourses.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Router/AddCourseRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_static/FetchingQuery.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_static/FetchingQuery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_static/AddInTheDatabase1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_static/AddRoom.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/AddRoom.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_static/AddRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/AddRoom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_static/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_static/AddInTheDatabase.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/AddInTheDatabase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/AddCourse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_static/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/AddCourse.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,28 +33,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="44" />
-          <entry key="js" value="151" />
+          <entry key="html" value="46" />
+          <entry key="js" value="154" />
           <entry key="json" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="44" />
+          <entry key="HTML" value="46" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="151" />
+          <entry key="JavaScript" value="154" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="3828" />
-          <entry key="js" value="26462" />
+          <entry key="html" value="3862" />
+          <entry key="js" value="26463" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="3910" />
-          <entry key="JavaScript" value="26380" />
+          <entry key="HTML" value="3944" />
+          <entry key="JavaScript" value="26381" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -69,31 +64,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public_static/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_static/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
-              <folding>
-                <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+            <state relative-caret-position="105">
+              <caret line="7" column="85" selection-start-line="7" selection-start-column="85" selection-end-line="7" selection-end-column="85" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_static/AddInTheDatabase.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2238">
+              <caret line="318" column="55" lean-forward="true" selection-start-line="318" selection-start-column="55" selection-end-line="318" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_static/AddInTheDatabase1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1095">
+              <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_static/AddInTheDatabase.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-10">
+              <caret line="178" lean-forward="true" selection-start-line="178" selection-end-line="178" />
             </state>
           </provider>
         </entry>
@@ -123,7 +124,6 @@
         <option value="$PROJECT_DIR$/Controller/OptionQuery.js" />
         <option value="$PROJECT_DIR$/Controller/MainQuery.js" />
         <option value="$PROJECT_DIR$/public_static/script.js" />
-        <option value="$PROJECT_DIR$/public_static/AddInTheDatabase.html" />
         <option value="$PROJECT_DIR$/Router/AddRoom.js" />
         <option value="$PROJECT_DIR$/Router/AddRoomRoute.js" />
         <option value="$PROJECT_DIR$/Controller/AddRooms_Courses_Teacher.js" />
@@ -140,11 +140,13 @@
         <option value="$PROJECT_DIR$/public_static/FetchingQuery.js" />
         <option value="$PROJECT_DIR$/public_static/FetchingQuery.html" />
         <option value="$PROJECT_DIR$/Router/AddCourse.js" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/Controller/AddCourses.js" />
         <option value="$PROJECT_DIR$/public_static/index.html" />
         <option value="$PROJECT_DIR$/public_static/index.js" />
         <option value="$PROJECT_DIR$/Router/AddCourseRoute.js" />
+        <option value="$PROJECT_DIR$/public_static/AddCourse.html" />
+        <option value="$PROJECT_DIR$/public_static/AddInTheDatabase.html" />
+        <option value="$PROJECT_DIR$/server.js" />
       </list>
     </option>
   </component>
@@ -185,22 +187,7 @@
             <path>
               <item name="CollegeProjectTimeTable" type="b2602c69:ProjectViewProjectNode" />
               <item name="CollegeProjectTimeTable" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CollegeProjectTimeTable" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CollegeProjectTimeTable" type="462c0819:PsiDirectoryNode" />
-              <item name="DB" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CollegeProjectTimeTable" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CollegeProjectTimeTable" type="462c0819:PsiDirectoryNode" />
               <item name="public_static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CollegeProjectTimeTable" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CollegeProjectTimeTable" type="462c0819:PsiDirectoryNode" />
-              <item name="Router" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -263,12 +250,12 @@
       <workItem from="1538928717738" duration="20115000" />
       <workItem from="1538971332733" duration="4049000" />
       <workItem from="1538981132327" duration="4397000" />
-      <workItem from="1539016412612" duration="64219000" />
+      <workItem from="1539016412612" duration="65136000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207176000" />
+    <option name="totallyTimeSpent" value="208093000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -286,7 +273,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32789558" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32626426" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3284553" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -354,13 +341,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/AddInTheDatabase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="193" column="39" selection-start-line="193" selection-start-column="39" selection-end-line="193" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controller/MainQueryDelete.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
@@ -400,13 +380,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-212">
           <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/AddInTheDatabase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -476,28 +449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/FetchingQuery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="199" column="31" selection-start-line="199" selection-start-column="31" selection-end-line="199" selection-end-column="31" />
-          <folding>
-            <element signature="e#572#1408#0" />
-            <element signature="e#1449#1920#0" />
-            <element signature="e#1968#2325#0" />
-            <element signature="e#2365#2795#0" />
-            <element signature="e#2837#3019#0" />
-            <element signature="e#3077#3591#0" />
-            <element signature="e#3657#4295#0" />
-            <element signature="e#4347#4920#0" />
-            <element signature="e#4955#5005#0" />
-            <element signature="e#5040#5096#0" />
-            <element signature="e#5135#5196#0" />
-            <element signature="e#6360#7633#0" />
-            <element signature="e#7701#8656#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_static/AddRoom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
@@ -516,23 +467,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Router/AddRoomRoute.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -547,10 +481,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/index.js">
+    <entry file="file://$PROJECT_DIR$/public_static/FetchingQuery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6870">
+          <caret line="197" column="14" lean-forward="true" selection-start-line="197" selection-start-column="14" selection-end-line="197" selection-end-column="14" />
+          <folding>
+            <element signature="e#572#1408#0" />
+            <element signature="e#1449#1920#0" />
+            <element signature="e#1968#2325#0" />
+            <element signature="e#2365#2795#0" />
+            <element signature="e#2837#3019#0" />
+            <element signature="e#3077#3591#0" />
+            <element signature="e#3657#4295#0" />
+            <element signature="e#4347#4920#0" />
+            <element signature="e#4955#5005#0" />
+            <element signature="e#5040#5096#0" />
+            <element signature="e#5135#5196#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/AddInTheDatabase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="178" lean-forward="true" selection-start-line="178" selection-end-line="178" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/AddCourse.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/AddCourse.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/AddInTheDatabase1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/AddInTheDatabase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2238">
+          <caret line="318" column="55" lean-forward="true" selection-start-line="318" selection-start-column="55" selection-end-line="318" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="85" selection-start-line="7" selection-start-column="85" selection-end-line="7" selection-end-column="85" />
         </state>
       </provider>
     </entry>
