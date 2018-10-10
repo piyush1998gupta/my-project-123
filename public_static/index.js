@@ -208,6 +208,16 @@ $(()=> {
                 var tableid
                 if(queryask.classgroup=='All' && queryask.teachername=='All'&&queryask.roomno=='All'){
                     console.log("Different tables")
+
+                    createTable("5C123")
+                    createTable("5C456")
+                    createTable("5C789")
+                    createTable("5C111213")
+
+
+
+
+
                 }else {
                     console.log("one table")
                     tableid= "classgroup"+"teacher"+queryask.roomno
@@ -262,7 +272,20 @@ $(()=> {
                 var classtypesymbol = classtype.substring(0,3)
         // console.log(classtypesymbol)
         var checkinglecture = $("." + day + "  ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno)
+        if(queryask.classgroup=='All' && queryask.teachername=='All'&&queryask.roomno=='All'){
+            var classgroupid
+            if(classgroup=='C-1'||classgroup=='C-2'||classgroup=='C-3'){
+                classgroupid="C123"
+            }else if(classgroup=='C-4'||classgroup=='C-5'||classgroup=='C-6'){
+                classgroupid="C456"
+            }else if(classgroup=='C-9'||classgroup=='C-8'||classgroup=='C-7'){
+                classgroupid="C789"
+            }else{
+                classgroupid="C111213"
+            }
 
+            tableid="5"+classgroupid
+        }
 
         if(classtype=="Lab" || classtype=="Tutorial") {
             if (classtype == "Lab") {
@@ -270,11 +293,11 @@ $(()=> {
                 // console.log("." + day + " ."+classgroup.split("-")[1]+ " ."+timeslot)
 
                 $("#"+tableid+" ." + day + " ." + classgroup.split("-")[1] + " ." + timeslot).append(
-                    displaydynamicdata()
+                    displaydynamiclabdata()
                 ).attr("colspan", "2").next().attr("hidden", "true")
             } else {
                 $("#"+tableid+" ." + day + " ." + classgroup.split("-")[1] + " ." + timeslot).append(
-                    displaydynamicdata()
+                    displaydynamiclabdata()
                 )
             }
         }else
@@ -289,7 +312,7 @@ $(()=> {
             //".lect class wo wali hai jisme lecture ki classes jayengi
             if( checkinglecture.length==0) {
                 $("#"+tableid+" ." + day + " .lect" + " ." + timeslot).append(
-                    displaydynamicdata()
+                    displaydynamiclecturedata()
                 ).attr("rowspan","3")
             }
             else{
@@ -304,7 +327,7 @@ $(()=> {
         }
 
 
-        function displaydynamicdata(){
+        function displaydynamiclecturedata(){
             return  `<div class="${classsemester}${coursecode}${teacherid}${roomno}">`+
                             (queryask.semester=='All'||queryask.classgroup=='All'
                                 ?
@@ -320,17 +343,44 @@ $(()=> {
                             +
 
 
-                            (queryask.coursename=='All'?`<span class="${coursename}">${coursename}</span>`:'')+
+                            (queryask.coursename=='All'?`<span class="${coursecode}">${coursename}</span>`:'')+
                             (queryask.roomtype=='All'?`<span class="${classtype}"> (${classtypesymbol})</span>`:'') +
-                            (queryask.teachername=='All'?`<div class="${teachername}"> ${teachername}</div>`:'')+
+                            (queryask.teachername=='All'?`<div class="${teacherid}"> ${teachername}</div>`:'')+
                             (queryask.roomno=='All' ? `<div class="${roomno}"> ${roomno} </div>`:'')+
 
                       ` </div> <br>`
         }
 
+        function displaydynamiclabdata(){
+            return  `<div class="${classsemester}${coursecode}${teacherid}${roomno}">`+
+                (queryask.semester=='All'||queryask.classgroup=='All'
+                    ?
+                    `<span class="${classgroup.substring(0,1)}"> `+
+                    (queryask.semester=='All' ?
+                        `${classsemester}`:'')+
+                    (queryask.classgroup=='All'?`-${classgroup},`:""
 
+                    )+
+
+                    `</span>`
+                    :'')
+                +
+
+
+                (queryask.coursename=='All'?`<span class="${coursecode}">${coursename}</span>`:'')+
+                (queryask.roomtype=='All'?`<span class="${classtype}"> (${classtypesymbol}),</span>`:'') +
+                (queryask.teachername=='All'?`<span class="${teacherid}"> ${teachername},</span>`:'')+
+                (queryask.roomno=='All' ? `<span class="${roomno},"> ${roomno} </span>`:'')+
+
+                ` </div> <br>`
+        }
 
         }
+
+
+
+
+
 
 
     function createTable(tableid){
@@ -547,6 +597,13 @@ $(()=> {
 
     </table>
     </font>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
             `
         )
     }
