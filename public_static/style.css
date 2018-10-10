@@ -1,0 +1,4 @@
+#mainqueryresult table td:hover{
+    background-color: #b6d3ab;
+    transform: scale(1.2);
+}

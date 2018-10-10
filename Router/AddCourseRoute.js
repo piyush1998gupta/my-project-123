@@ -1,5 +1,5 @@
 const route = require("express").Router()
-const controlleradd = require('../Controller/AddCourses')
+const controlleradd = require('../Controller/AddCoursesController')
 
 
 route.post("/Add",(req,res)=>{

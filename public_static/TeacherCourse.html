@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher-Course-Relation</title>
+    <script src="jquery.js"></script>
+    <script src="TeacherCourse.html"></script>
+</head>
+<body>
+
+<form id="addteachercourse">
+    Teacher Details :-
+    <br>
+    Select Teacher Branch :- <select id="teacherbranch" name="teacherbranch">
+                <option selected>CSE</option>
+                <option>IT</option>
+                <option>ECE</option>
+                <option>EEE</option>
+                <option>MEC</option>
+                <option>Other</option>
+</select>
+    <br>
+    Select Teacher : - <select id="teachername" name="teachername">
+    <option selected disabled>Select Teacher</option>
+</select>
+<br>
+    Course Details :-
+    Select Course Branch :- <select id="coursebranch" name="coursebranch">
+    <option selected>CSE</option>
+    <option>IT</option>
+    <option>ECE</option>
+    <option>EEE</option>
+    <option>MEC</option>
+    <option>Other</option>
+
+</select>
+    <br>
+    Select Course Semester :- <select id="coursesemester" name="coursesemester">
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+</select>
+<br>
+    Select Course Name :- <select id="coursename" name="coursename">
+    <option selected disabled>Select Course</option>
+
+</select>
+<br>
+    <input type="submit" value="ADD" id="add">
+
+</form>
+
+<table style="border:1px solid black" width="87%" height="100%" border="1" id="mainresult">
+    <caption></caption>
+    <tbody>
+    <thead>
+    <tr>
+
+        <td>Teacher Branch</td>
+        <td>Teacher Name </td>
+        <td> Course Name </td>
+        <td> Course Branch </td>
+    </tr>
+
+    </thead>
+
+    <!--</tr>-->
+</table>
+
+</body>
+</html>

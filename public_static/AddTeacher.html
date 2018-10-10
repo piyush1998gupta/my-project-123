@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD TEACHER</title>
+    <script src="jquery.js"></script>
+    <script src="AddTeacher.js"></script>
+</head>
+<body>
+
+
+<form id="addteacher">
+    Select Branch :- <select id="teacherbranch" name="teacherbranch" >
+    <option selected>CSE</option>
+    <option>IT</option>
+    <option>ECE</option>
+    <option>EEE</option>
+    <option>MEC</option>
+    <option>Other</option>
+</select> <br>
+    Enter Teacher ID : <input type="text" name="teacherid" required>
+    <br>
+
+    Enter Teacher Name :-  <input id="teachername" name="teachername" required><br>
+
+    Enter Teacher Room Number :- <input id="teacherroom" name="teacherroom"><br>
+
+    <input type="submit" id="add" value=" ADD TEACHER">
+
+</form>
+
+
+<button id="deleteteacher" style="margin : 30px"> DELETE  </button>
+
+<table id="mainresult" border=1 style="margin-left: 30px" width="50%" >
+    <tr>
+        <td>Teacher Branch</td>
+        <td>Teacher Id</td>
+        <td>Teacher Name</td>
+        <td>Teacher Room No</td>
+        <td> CheckBox</td>
+    </tr>
+</table>
+
+</body>
+</html>
