@@ -91,15 +91,11 @@ $(()=>{
         // }
         // return false
     }
-    var i=1
 
 
 
 
-    $(".parent").append(
-        `<div> hi </div> <div>`
-        +
-        (i=1 ? `<div>bye</div>`:'')+`jksd</div>`
-    )
+
+
 
 })
