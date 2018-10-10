@@ -637,7 +637,7 @@ $(()=> {
 
     </thead>
      <tbody>
-    <tr class="Monday dayshow">
+    <tr class="Monday dayshow" hidden>
     <td class="">Monday</td>
     <td class="091500 clr"></td>
     <td class="100500 clr"></td>
@@ -649,7 +649,7 @@ $(()=> {
     <td class="153500 clr"></td>
     </tr>
 
-    <tr class="Tuesday dayshow">
+    <tr class="Tuesday dayshow" hidden>
     <td>Tuesday</td>
     <td class="091500 clr"></td>
     <td class="100500 clr"></td>
@@ -661,7 +661,7 @@ $(()=> {
     <td class="145500 clr"></td>
     <td class="153500 clr"></td>
     </tr>
-    <tr class="Wednesday dayshow">
+    <tr class="Wednesday dayshow" hidden>
     <td>Wednesday</td>
     <td class="091500 clr"></td>
     <td class="100500 clr"></td>
@@ -673,7 +673,7 @@ $(()=> {
     <td class="145500 clr"></td>
     <td class="153500 clr"></td>
     </tr>
-    <tr class="Thursday dayshow">
+    <tr class="Thursday dayshow" hidden>
     <td>Thursday</td>
     <td class="091500 clr"></td>
     <td class="100500 clr"></td>
@@ -685,7 +685,7 @@ $(()=> {
     <td class="145500 clr"></td>
     <td class="153500 clr"></td>
     </tr>
-    <tr class="Friday dayshow">
+    <tr class="Friday dayshow" hidden>
     <td>friday</td>
     <td class="091500 clr" ></td>
     <td class="100500 clr" ></td>
