@@ -221,7 +221,7 @@ $(()=> {
 
                 }else if((queryask.classgroup=='C-123' || queryask.classgroup=='C-456' || queryask.classgroup=='C-789' || queryask.classgroup=='C-111213') &&  queryask.teachername=='All'&&queryask.roomno=='All' ){
                     console.log("one table")
-                    tableid= "classgroup"+"teacher"+queryask.roomno
+                    tableid= queryask.classgroup
                     console.log(tableid)
                     createTablewhencombinegroup(tableid)
                     fordisplayingqueriesofcombinedgroup(result,tableid)
@@ -393,12 +393,13 @@ $(()=> {
 
 
     function createTablewhencombinegroup(tableid){
+        var tablegroup = tableid.split('')
         $("#mainqueryresult").append(
             `
             <font size="1" face="Courier New" >
 
     <table id="${tableid}" border="1" height="100%" width="100%" >
-
+          <caption><h2 align="center">TimeTable of ${tableid}</h2></caption>
         <thead >
         <td></td>
         <td>9:15-10:05</td>
@@ -609,10 +610,7 @@ $(()=> {
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    
             `
         )
     }
@@ -623,7 +621,7 @@ $(()=> {
         $("#mainqueryresult").append(`
          <font size="1" face="Courier New" >
     <table id="${tableid}" width="100%" height="100%" border="2">
-    <caption id="tablecaption"></caption>
+    <caption id="tablecaption"><h2 align="center">Result:-</h2></caption>
    
     <thead >
     <td></td>
@@ -631,6 +629,7 @@ $(()=> {
     <td>10:05-10:55</td>
     <td>10:55-11:45</td>
     <td>11:45-12:35</td>
+    
     <td>1:15-2:05</td>
     <td>2:05-2:55</td>
     <td>2:55-3:45</td>

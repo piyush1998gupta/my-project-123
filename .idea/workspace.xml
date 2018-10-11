@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e529dcae-d560-4814-835c-cbbe9978ef80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Controller/AddTeacherController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Router/AddTeacherRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_static/AddTeacher.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_static/AddTeacher.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_static/TeacherCourse.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_static/TeacherCourse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_static/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/AddCourses.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/AddCoursesController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Router/AddCourseRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/Router/AddCourseRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public_static/AddCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/AddCourse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_static/AddCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/AddCourse.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public_static/AddRoom.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/AddRoom.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_static/AddTeacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/AddTeacher.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public_static/FetchingQuery.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/FetchingQuery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_static/FetchingQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/FetchingQuery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_static/TeacherCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/TeacherCourse.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,37 +29,37 @@
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.24" value="1" />
-          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.25" value="2" />
           <entry key="project.open.time.38" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
-          <entry key="html" value="64" />
-          <entry key="js" value="167" />
+          <entry key="html" value="73" />
+          <entry key="js" value="174" />
           <entry key="json" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="HTML" value="64" />
+          <entry key="HTML" value="73" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="167" />
+          <entry key="JavaScript" value="174" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="4957" />
-          <entry key="js" value="27403" />
+          <entry key="html" value="5034" />
+          <entry key="js" value="27638" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="5039" />
-          <entry key="JavaScript" value="27321" />
+          <entry key="HTML" value="5120" />
+          <entry key="JavaScript" value="27552" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -75,30 +68,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public_static/TeacherCourse.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_static/AddRoom.html">
+        <entry file="file://$PROJECT_DIR$/public_static/FetchingQuery.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="254" column="12" lean-forward="true" selection-start-line="235" selection-start-column="4" selection-end-line="254" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_static/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="188" selection-start-line="188" selection-end-line="188" />
+            <state relative-caret-position="4845">
+              <caret line="323" column="8" selection-start-line="323" selection-start-column="8" selection-end-line="323" selection-end-column="8" />
               <folding>
+                <element signature="n#style#0;n#input#0;n#div#6;n#form#0;n#div#0;n#div#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -106,8 +82,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_static/TeacherCourse.js">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="73" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public_static/FetchingQuery.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="636" lean-forward="true" selection-start-line="636" selection-end-line="636" />
+              <folding>
+                <element signature="e#572#1408#0" />
+                <element signature="e#1449#1920#0" />
+                <element signature="e#1968#2325#0" />
+                <element signature="e#2365#2795#0" />
+                <element signature="e#2837#3019#0" />
+                <element signature="e#3077#3591#0" />
+                <element signature="e#3657#4295#0" />
+                <element signature="e#4347#4920#0" />
+                <element signature="e#4955#5005#0" />
+                <element signature="e#5040#5096#0" />
+                <element signature="e#5135#5196#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_static/AddCourse.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -145,26 +156,28 @@
         <option value="$PROJECT_DIR$/public_static/table.js" />
         <option value="$PROJECT_DIR$/Controller/AddDatabase.js" />
         <option value="$PROJECT_DIR$/DB/DBServer.js" />
-        <option value="$PROJECT_DIR$/public_static/AddRoom.html" />
         <option value="$PROJECT_DIR$/public_static/AddRoom.js" />
         <option value="$PROJECT_DIR$/public_static/FetchingData.html" />
-        <option value="$PROJECT_DIR$/public_static/FetchingQuery.js" />
         <option value="$PROJECT_DIR$/Router/AddCourse.js" />
         <option value="$PROJECT_DIR$/Controller/AddCourses.js" />
         <option value="$PROJECT_DIR$/Router/AddCourseRoute.js" />
         <option value="$PROJECT_DIR$/public_static/AddInTheDatabase.html" />
-        <option value="$PROJECT_DIR$/public_static/AddCourse.html" />
         <option value="$PROJECT_DIR$/Controller/AddTeacher.js" />
         <option value="$PROJECT_DIR$/Controller/AddTeacherController.js" />
         <option value="$PROJECT_DIR$/Router/AddTeacherRouter.js" />
         <option value="$PROJECT_DIR$/public_static/index.js" />
         <option value="$PROJECT_DIR$/public_static/index.html" />
         <option value="$PROJECT_DIR$/public_static/AddRoom34.html" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/public_static/style.css" />
         <option value="$PROJECT_DIR$/public_static/TeacherCourse.js" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/public_static/AddCourse.js" />
         <option value="$PROJECT_DIR$/public_static/FetchingQuery.html" />
+        <option value="$PROJECT_DIR$/public_static/AddCourse.html" />
         <option value="$PROJECT_DIR$/public_static/TeacherCourse.html" />
+        <option value="$PROJECT_DIR$/public_static/AddTeacher.html" />
+        <option value="$PROJECT_DIR$/public_static/AddRoom.html" />
+        <option value="$PROJECT_DIR$/public_static/FetchingQuery.js" />
       </list>
     </option>
   </component>
@@ -283,12 +296,13 @@
       <workItem from="1538928717738" duration="20115000" />
       <workItem from="1538971332733" duration="4049000" />
       <workItem from="1538981132327" duration="4397000" />
-      <workItem from="1539016412612" duration="74305000" />
+      <workItem from="1539016412612" duration="78443000" />
+      <workItem from="1539238594150" duration="632000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217262000" />
+    <option name="totallyTimeSpent" value="222032000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -315,7 +329,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952693" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4996277" weight="0.24632953" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4996277" visible="true" weight="0.24632953" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003723" side_tool="true" weight="0.24632953" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -382,27 +396,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/FetchingQuery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="144" selection-start-line="144" selection-end-line="144" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/table.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/table.html" />
+    <entry file="file://$PROJECT_DIR$/public_static/table.js" />
     <entry file="file://$PROJECT_DIR$/Router/AddInTheDatabase.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
@@ -420,17 +415,6 @@
     <entry file="file://$PROJECT_DIR$/public_static/jquery.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/FetchingQuery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1476">
-          <caret line="388" column="32" selection-start-line="387" selection-end-line="388" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#9;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DB/DBServer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -438,13 +422,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/FetchingData.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/FetchingData.html" />
     <entry file="file://$PROJECT_DIR$/Router/FetchingQuery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-253">
@@ -473,26 +451,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/FetchingQuery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6870">
-          <caret line="197" column="14" lean-forward="true" selection-start-line="197" selection-start-column="14" selection-end-line="197" selection-end-column="14" />
-          <folding>
-            <element signature="e#572#1408#0" />
-            <element signature="e#1449#1920#0" />
-            <element signature="e#1968#2325#0" />
-            <element signature="e#2365#2795#0" />
-            <element signature="e#2837#3019#0" />
-            <element signature="e#3077#3591#0" />
-            <element signature="e#3657#4295#0" />
-            <element signature="e#4347#4920#0" />
-            <element signature="e#4955#5005#0" />
-            <element signature="e#5040#5096#0" />
-            <element signature="e#5135#5196#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_static/AddInTheDatabase.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-10">
@@ -500,27 +458,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/AddInTheDatabase1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/AddInTheDatabase1.html" />
     <entry file="file://$PROJECT_DIR$/public_static/AddInTheDatabase.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2238">
           <caret line="318" column="55" lean-forward="true" selection-start-line="318" selection-start-column="55" selection-end-line="318" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/AddCourse.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -538,13 +480,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/AddCourse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controller/AddTeacherController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -552,25 +487,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/AddRoom1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/AddRoom1.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/AddRoom.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-223" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/AddRoom1.html" />
     <entry file="file://$PROJECT_DIR$/public_static/AddTeacher.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -581,17 +498,18 @@
     <entry file="file://$PROJECT_DIR$/public_static/style.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Router/AddTeacherRouter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="36" column="54" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/AddTeacher1.html" />
+    <entry file="file://$PROJECT_DIR$/public_static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="188" selection-start-line="188" selection-end-line="188" />
         </state>
       </provider>
     </entry>
@@ -602,21 +520,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/AddTeacher.html">
+    <entry file="file://$PROJECT_DIR$/public_static/AddCourse1.html" />
+    <entry file="file://$PROJECT_DIR$/public_static/AddCourse.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="377">
+          <caret line="260" column="8" lean-forward="true" selection-start-line="254" selection-start-column="2" selection-end-line="260" selection-end-column="8" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/AddRoom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="261" column="8" selection-start-line="261" selection-start-column="8" selection-end-line="261" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/AddTeacher.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="244" column="8" selection-start-line="244" selection-start-column="8" selection-end-line="244" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/TeacherCourse.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/TeacherCourse.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/public_static/FetchingQuery.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="304" column="62" selection-start-line="304" selection-start-column="62" selection-end-line="304" selection-end-column="62" />
+        <state relative-caret-position="4845">
+          <caret line="323" column="8" selection-start-line="323" selection-start-column="8" selection-end-line="323" selection-end-column="8" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#6;n#form#0;n#div#0;n#div#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#html#0;n#!!top" expanded="true" />
@@ -624,30 +563,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/AddRoom.html">
+    <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="254" column="12" lean-forward="true" selection-start-line="235" selection-start-column="4" selection-end-line="254" selection-end-column="12" />
+        <state relative-caret-position="150">
+          <caret line="10" column="73" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/index.html">
+    <entry file="file://$PROJECT_DIR$/public_static/AddCourse.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="188" selection-start-line="188" selection-end-line="188" />
+        <state relative-caret-position="117">
+          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_static/FetchingQuery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="636" lean-forward="true" selection-start-line="636" selection-end-line="636" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#572#1408#0" />
+            <element signature="e#1449#1920#0" />
+            <element signature="e#1968#2325#0" />
+            <element signature="e#2365#2795#0" />
+            <element signature="e#2837#3019#0" />
+            <element signature="e#3077#3591#0" />
+            <element signature="e#3657#4295#0" />
+            <element signature="e#4347#4920#0" />
+            <element signature="e#4955#5005#0" />
+            <element signature="e#5040#5096#0" />
+            <element signature="e#5135#5196#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/TeacherCourse.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_static/TeacherCourse.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
         </state>
       </provider>
     </entry>

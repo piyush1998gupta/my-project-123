@@ -53,6 +53,9 @@ $(()=>{
     function Courseview(){
         $(".clr").remove()
         // console.log("Inside Courseview")
+        // console.log($("#coursebranch").val())
+        // console.log($("#coursetype").val())
+        // console.log($("#coursesemester").val())
 
         $.ajax({
             type: "GET",
@@ -63,9 +66,10 @@ $(()=>{
                 coursesemester:$("#coursesemester").val()
             },
             success : function (data) {
-                // console.log(data)
+                console.log(data)
                 AddCourse(data)
             }
+
         })
     }
 
