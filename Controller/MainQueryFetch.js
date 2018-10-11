@@ -125,8 +125,8 @@ async function getallvalues(queryobject){
                 " MasterCseTable.ClassType "+RoomTypeSymbol + " '" + RoomTypeValue + "' AND " +
                 " MasterCseTable.Day "+ DaySymbol + " '" + DayValue +"' AND " +
                 "( ( MasterCseTable.StartTime "+ StartTimeSymbol + " '" + StartTimeValue + "' AND " +
-                " MasterCseTable.StartTime "+ EndTimeSymbol + " '" + EndTimeValue + "' ) OR ( '" +
-                StartTimeValue +"' Between MasterCseTable.StartTime And MasterCseTable.EndTime And MasterCseTable.Classtype= 'Lab' )"+ " )AND " +
+                " MasterCseTable.StartTime "+ EndTimeSymbol + " '" + EndTimeValue + "' ) OR " +
+                "( MasterCseTable.StartTime < '"+ StartTimeValue +"' And MasterCseTable.EndTime > '"+ StartTimeValue +"' And MasterCseTable.Classtype= 'Lab' )"+ " )AND " +
                 " MasterCseTable.RoomId " + RoomNoSymbol + " '" + RoomNoValue + "' AND " +
                 " AddCourse.CourseName " + CourseNameSymbol + " '" + CourseNameValue + "' AND " +
                 " AddTeacher.TeacherName " + TeacherNameSymbol + " '"+ TeacherNameValue + "' "

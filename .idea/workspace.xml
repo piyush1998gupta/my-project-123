@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e529dcae-d560-4814-835c-cbbe9978ef80" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_static/AddCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/AddCourse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_static/AddCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/AddCourse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_static/AddRoom.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/AddRoom.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_static/AddTeacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/AddTeacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_static/FetchingQuery.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/FetchingQuery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_static/FetchingQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/FetchingQuery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_static/TeacherCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_static/TeacherCourse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/MainQueryFetch.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/MainQueryFetch.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,7 +31,7 @@
         <counts>
           <entry key="css" value="1" />
           <entry key="html" value="73" />
-          <entry key="js" value="174" />
+          <entry key="js" value="176" />
           <entry key="json" value="1" />
         </counts>
       </usages-collector>
@@ -47,19 +40,19 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="73" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="174" />
+          <entry key="JavaScript" value="176" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="5034" />
-          <entry key="js" value="27638" />
+          <entry key="js" value="27667" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="5120" />
-          <entry key="JavaScript" value="27552" />
+          <entry key="JavaScript" value="27581" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -90,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_static/FetchingQuery.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="123">
-              <caret line="636" lean-forward="true" selection-start-line="636" selection-end-line="636" />
+              <caret line="636" selection-start-line="636" selection-end-line="637" />
               <folding>
                 <element signature="e#572#1408#0" />
                 <element signature="e#1449#1920#0" />
@@ -108,6 +101,24 @@
                 <element signature="e#5040#5096#0" />
                 <element signature="e#5135#5196#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Controller/MainQueryFetch.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="128" column="45" selection-start-line="128" selection-start-column="45" selection-end-line="128" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/AddDatabase.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="154" column="145" selection-start-line="154" selection-start-column="116" selection-end-line="154" selection-end-column="145" />
             </state>
           </provider>
         </entry>
@@ -178,6 +189,7 @@
         <option value="$PROJECT_DIR$/public_static/AddTeacher.html" />
         <option value="$PROJECT_DIR$/public_static/AddRoom.html" />
         <option value="$PROJECT_DIR$/public_static/FetchingQuery.js" />
+        <option value="$PROJECT_DIR$/Controller/MainQueryFetch.js" />
       </list>
     </option>
   </component>
@@ -297,12 +309,12 @@
       <workItem from="1538971332733" duration="4049000" />
       <workItem from="1538981132327" duration="4397000" />
       <workItem from="1539016412612" duration="78443000" />
-      <workItem from="1539238594150" duration="632000" />
+      <workItem from="1539238594150" duration="2249000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="222032000" />
+    <option name="totallyTimeSpent" value="223649000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -315,9 +327,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24944155" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24944155" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -329,7 +340,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952693" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4996277" visible="true" weight="0.24632953" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4996277" visible="true" weight="0.24632953" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003723" side_tool="true" weight="0.24632953" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -405,13 +416,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/MainQueryFetch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-212">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_static/jquery.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -427,13 +431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-253">
           <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/AddDatabase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -580,7 +577,7 @@
     <entry file="file://$PROJECT_DIR$/public_static/FetchingQuery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
-          <caret line="636" lean-forward="true" selection-start-line="636" selection-end-line="636" />
+          <caret line="636" selection-start-line="636" selection-end-line="637" />
           <folding>
             <element signature="e#572#1408#0" />
             <element signature="e#1449#1920#0" />
@@ -594,6 +591,20 @@
             <element signature="e#5040#5096#0" />
             <element signature="e#5135#5196#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/AddDatabase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="154" column="145" selection-start-line="154" selection-start-column="116" selection-end-line="154" selection-end-column="145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/MainQueryFetch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="128" column="45" selection-start-line="128" selection-start-column="45" selection-end-line="128" selection-end-column="45" />
         </state>
       </provider>
     </entry>
