@@ -207,32 +207,32 @@ $(()=> {
 
 
                 var tableid
-                if(queryask.classgroup=='All' && queryask.teachername=='All'&&queryask.roomno=='All'){
-                    console.log("Different tables")
+        if( $("#sbranch").val()=="CSE") {
+            if (queryask.classgroup == 'All' && queryask.teachername == 'All' && queryask.roomno == 'All') {
+                console.log("Different tables")
 
-                    createTablewhencombinegroup("5C123")
-                    createTablewhencombinegroup("5C456")
-                    createTablewhencombinegroup("5C789")
-                    createTablewhencombinegroup("5C111213")
+                createTablewhencombinegroup("5C123")
+                createTablewhencombinegroup("5C456")
+                createTablewhencombinegroup("5C789")
+                createTablewhencombinegroup("5C111213")
 
-                    fordisplayingqueriesofcombinedgroup(result,tableid)
-
-
-
-                }else if((queryask.classgroup=='C-123' || queryask.classgroup=='C-456' || queryask.classgroup=='C-789' || queryask.classgroup=='C-111213') &&  queryask.teachername=='All'&&queryask.roomno=='All' ){
-                    console.log("one table")
-                    tableid= queryask.classgroup
-                    console.log(tableid)
-                    createTablewhencombinegroup(tableid)
-                    fordisplayingqueriesofcombinedgroup(result,tableid)
-                }else{
-                    tableid='uniquetabledesignforeach'
-                    uniquetabledesignforsinglegroup(tableid)
-
-                    fordisplayingqueriesofsinglegroup(result,tableid)
-                }
+                fordisplayingqueriesofcombinedgroup(result, tableid)
 
 
+            } else if ((queryask.classgroup == 'C-123' || queryask.classgroup == 'C-456' || queryask.classgroup == 'C-789' || queryask.classgroup == 'C-111213') && queryask.teachername == 'All' && queryask.roomno == 'All') {
+                console.log("one table")
+                tableid = queryask.classgroup
+                console.log(tableid)
+                createTablewhencombinegroup(tableid)
+                fordisplayingqueriesofcombinedgroup(result, tableid)
+            } else {
+                tableid = 'uniquetabledesignforeach'
+                uniquetabledesignforsinglegroup(tableid)
+
+                fordisplayingqueriesofsinglegroup(result, tableid)
+            }
+
+        }
 
     //
 
@@ -415,7 +415,7 @@ $(()=> {
         <tbody class="Monday dayshow" hidden >
 
         <tr class="1 4 7 11 lect" border="0" >
-            <td rowspan="3">Monday</td>
+            <td rowspan="3" >Monday</td>
             <td class="091500 clr "></td>
             <td class="100500 clr"></td>
             <td class="105500 clr"></td>
@@ -636,6 +636,7 @@ $(()=> {
     <td>3:45-4:35</td>
 
     </thead>
+     
      <tbody>
     <tr class="Monday dayshow" hidden>
     <td class="">Monday</td>

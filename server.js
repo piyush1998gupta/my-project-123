@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/AddInTheDatabase',express.static(__dirname+"/public_static/AddInTheDatabase.html"))
 app.use('/AddCourse',express.static(__dirname+"/public_static/AddCourse.html"))
-app.use('/AddRoom',express.static(__dirname+"/public_static/AddRoom.html"))
+app.use('/AddRooms',express.static(__dirname+"/public_static/AddRoom.html"))
 app.use('/AddTeacher',express.static(__dirname+"/public_static/AddTeacher.html"))
 app.use('/',express.static(__dirname+"/public_static"))
 app.use("/FetchingQuery",require("./Router/FetchingQuery"))
