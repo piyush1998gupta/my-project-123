@@ -342,19 +342,8 @@ $(()=> {
 
 
         function displaydynamiclecturedata(){
-            return  `<div class="${classsemester}${coursecode}${teacherid}${roomno}" align="center">`+
-                            (queryask.semester=='All'||queryask.classgroup=='All'
-                                ?
-                                `<div class="${classgroup.substring(0,1)}"> `+
-                                (queryask.semester=='All' ?
-                                `${classsemester}`:'')+
-                                (queryask.classgroup=='All'?`-${classgroup}`:
-                                        (classtype=='Lab'||classtype=='Tutorial'?`${classgroup} ${console.log("jaskakjja")}`:'')
-                                )+
+            return  `<div class="${classsemester}${coursecode}${teacherid}${roomno}   align="center">`+
 
-                                    `</div>`
-                            :'')
-                            +
 
 
                             (queryask.coursename=='All'?`<span class="${coursecode}">${coursename}</span>`:'')+
@@ -398,24 +387,24 @@ $(()=> {
             `
             <font size="1" face="Courier New" >
 
-    <table id="${tableid}" border="1" height="100%" width="100%" >
+    <table id="${tableid}" border="1" height="100%" width="100%">
           <caption><h2 align="center">TimeTable of ${tableid}</h2></caption>
         <thead >
-        <td></td>
-        <td>9:15-10:05</td>
-        <td>10:05-10:55</td>
-        <td>10:55-11:45</td>
-        <td>11:45-12:35</td>
-        <td>1:15-2:05</td>
-        <td>2:05-2:55</td>
-        <td>2:55-3:45</td>
-        <td>3:45-4:35</td>
+        <td class="heading"></td>
+        <td class="heading">9:15-10:05</td>
+        <td class="heading">10:05-10:55</td>
+        <td class="heading">10:55-11:45</td>
+        <td class="heading">11:45-12:35</td>
+        <td class="heading">1:15-2:05</td>
+        <td class="heading">2:05-2:55</td>
+        <td class="heading">2:55-3:45</td>
+        <td class="heading">3:45-4:35</td>
         </thead>
 
         <tbody class="Monday dayshow" hidden >
 
-        <tr class="1 4 7 11 lect" border="0" >
-            <td rowspan="3" >Monday</td>
+        <tr class="1 4 7 11 lect" >
+            <td rowspan="3" class="heading" >Monday</td>
             <td class="091500 clr "></td>
             <td class="100500 clr"></td>
             <td class="105500 clr"></td>
@@ -438,7 +427,7 @@ $(()=> {
             <td class="145500 clr"></td>
             <td class="153500 clr"></td>
         </tr>
-        <tr class="3 6 9 13 comblect">
+        <tr class="3 6 9 13 comblect bott">
 
             <td class="091500 clr "></td>
             <td class="100500 clr"></td>
@@ -454,7 +443,7 @@ $(()=> {
        </tbody>
         <tbody class="Tuesday dayshow" hidden >
         <tr class="1 4 7 11 lect">
-            <td rowspan="3">Tuesday</td>
+            <td rowspan="3" class="heading">Tuesday</td>
             <td class="091500 clr"></td>
             <td class="100500 clr"></td>
             <td class="105500 clr"></td>
@@ -477,7 +466,7 @@ $(()=> {
             <td class="145500 clr"></td>
             <td class="153500 clr"></td>
         </tr>
-        <tr class="3 6 9 13 comblect">
+        <tr class="3 6 9 13 comblect bott">
 
             <td class="091500 clr "></td>
             <td class="100500 clr"></td>
@@ -492,7 +481,7 @@ $(()=> {
         </tbody>
         <tbody class="Wednesday dayshow"  hidden>
         <tr class="1 4 7 11 lect">
-            <td rowspan="3">Wednesday</td>
+            <td rowspan="3" class="heading">Wednesday</td>
             <td class="091500 clr "></td>
             <td class="100500 clr"></td>
             <td class="105500 clr"></td>
@@ -515,7 +504,7 @@ $(()=> {
             <td class="145500 clr"></td>
             <td class="153500 clr"></td>
         </tr>
-        <tr class="3 6 9 13 comblect">
+        <tr class="3 6 9 13 comblect bott">
 
             <td class="091500 clr " ></td>
             <td class="100500 clr"></td>
@@ -530,7 +519,7 @@ $(()=> {
         </tbody>
         <tbody class="Thursday dayshow"  hidden>
         <tr class="1 4 7 11 lect">
-            <td rowspan="3">Thursday</td>
+            <td rowspan="3" class="heading">Thursday</td>
             <td class="091500 clr "></td>
             <td class="100500 clr"></td>
             <td class="105500 clr"></td>
@@ -553,7 +542,7 @@ $(()=> {
             <td class="145500 clr"></td>
             <td class="153500 clr"></td>
         </tr>
-        <tr class="3 6 9 13 comblect">
+        <tr class="3 6 9 13 comblect bott">
 
             <td class="091500 clr " ></td>
             <td class="100500 clr"></td>
@@ -568,7 +557,7 @@ $(()=> {
         </tbody>
         <tbody class="Friday dayshow" hidden >
         <tr class="1 4 7 11 lect">
-            <td rowspan="3">Friday</td>
+            <td rowspan="3" class="heading">Friday</td>
             <td class="091500 clr "></td>
             <td class="100500 clr"></td>
             <td class="105500 clr"></td>
@@ -591,7 +580,7 @@ $(()=> {
             <td class="145500 clr"></td>
             <td class="153500 clr"></td>
         </tr>
-        <tr class=" 3 6 9 13 comblect">
+        <tr class=" 3 6 9 13 comblect bott">
 
             <td class="091500 clr "></td>
             <td class="100500 clr"></td>
@@ -624,22 +613,22 @@ $(()=> {
     <caption id="tablecaption"><h2 align="center">Result:-</h2></caption>
    
     <thead >
-    <td></td>
-    <td>9:15-10:05</td>
-    <td>10:05-10:55</td>
-    <td>10:55-11:45</td>
-    <td>11:45-12:35</td>
+    <td class="heading"></td>
+    <td class="heading">9:15-10:05</td>
+    <td class="heading">10:05-10:55</td>
+    <td class="heading">10:55-11:45</td>
+    <td class="heading">11:45-12:35</td>
     
-    <td>1:15-2:05</td>
-    <td>2:05-2:55</td>
-    <td>2:55-3:45</td>
-    <td>3:45-4:35</td>
+    <td class="heading">1:15-2:05</td>
+    <td class="heading">2:05-2:55</td>
+    <td class="heading">2:55-3:45</td>
+    <td class="heading">3:45-4:35</td>
 
     </thead>
      
      <tbody>
-    <tr class="Monday dayshow" hidden>
-    <td class="">Monday</td>
+    <tr class="Monday dayshow bott" hidden>
+    <td class="heading">Monday</td>
     <td class="091500 clr"></td>
     <td class="100500 clr"></td>
     <td class="105500 clr"></td>
@@ -650,8 +639,8 @@ $(()=> {
     <td class="153500 clr"></td>
     </tr>
 
-    <tr class="Tuesday dayshow" hidden>
-    <td>Tuesday</td>
+    <tr class="Tuesday dayshow bott" hidden>
+    <td class="heading">Tuesday</td>
     <td class="091500 clr"></td>
     <td class="100500 clr"></td>
     <td class="105500 clr"></td>
@@ -662,8 +651,8 @@ $(()=> {
     <td class="145500 clr"></td>
     <td class="153500 clr"></td>
     </tr>
-    <tr class="Wednesday dayshow" hidden>
-    <td>Wednesday</td>
+    <tr class="Wednesday dayshow bott" hidden>
+    <td class="heading">Wednesday</td>
     <td class="091500 clr"></td>
     <td class="100500 clr"></td>
     <td class="105500 clr"></td>
@@ -674,8 +663,8 @@ $(()=> {
     <td class="145500 clr"></td>
     <td class="153500 clr"></td>
     </tr>
-    <tr class="Thursday dayshow" hidden>
-    <td>Thursday</td>
+    <tr class="Thursday dayshow bott" hidden>
+    <td class="heading">Thursday</td>
     <td class="091500 clr"></td>
     <td class="100500 clr"></td>
     <td class="105500 clr"></td>
@@ -686,8 +675,8 @@ $(()=> {
     <td class="145500 clr"></td>
     <td class="153500 clr"></td>
     </tr>
-    <tr class="Friday dayshow" hidden>
-    <td>friday</td>
+    <tr class="Friday dayshow bott" hidden>
+    <td class="heading">friday</td>
     <td class="091500 clr" ></td>
     <td class="100500 clr" ></td>
     <td class="105500 clr"></td>

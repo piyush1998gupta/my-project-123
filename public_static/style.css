@@ -2,3 +2,30 @@
     background-color: #b6d3ab;
     transform: scale(1.2);
 }
+#mainqueryresult table td{
+    height: 30px;
+    width: 60px;
+    background: white;
+}
+tbody {
+    border-bottom: black;
+
+}
+.heading {
+    font-weight: bolder;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: center;
+    border-bottom: 2px solid #000000;
+
+}
+table {
+    border: 3px solid #000000;
+}
+.bott{
+    border-bottom: 2px solid #000000;
+}
+table td{
+    border-left:1.75px solid #000000 ;
+    border-right: 1.75px solid #000000;
+}
