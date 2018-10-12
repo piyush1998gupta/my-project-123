@@ -313,7 +313,10 @@ $(()=> {
                 $("#"+tableid+" ." + day + " ." + classgroup.split("-")[1] + " ." + timeslot).append(
                     displaydynamiclabdata()
                 )
+                $("#"+tableid+" ." + day + " ." + classgroup.split("-")[1] + " ." + timeslot).addClass("tut")
             }
+            $("#"+tableid+" ." + day + " ." + classgroup.split("-")[1] + " ." + timeslot).addClass("filledlab")
+
         }else
         // if  (classtype=="Lecture")
 
@@ -328,6 +331,8 @@ $(()=> {
                 $("#"+tableid+" ." + day + " .lect" + " ." + timeslot).append(
                     displaydynamiclecturedata()
                 ).attr("rowspan","3")
+
+                $("#"+tableid+" ." + day + " .lect" + " ." + timeslot).addClass("pract")
             }
             else{
                 // console.log("." + day + " .lect" +  "  ." + " ."+timeslot+" ."+classsemester+coursecode+teacherid+roomno+" ."+classgroup.substring(0,1))
@@ -337,7 +342,7 @@ $(()=> {
 
                 $("#"+tableid+" ."+day+" .comblect ."+timeslot).attr("hidden",true)
             }
-
+            $("#"+tableid+" ." + day + " .lect" + " ." + timeslot).addClass("filledlab")
         }
 
 
@@ -404,7 +409,7 @@ $(()=> {
         <tbody class="Monday dayshow" hidden >
 
         <tr class="1 4 7 11 lect" >
-            <td rowspan="3" class="heading" >Monday</td>
+            <td rowspan="3" class="heading" valign="centre" >Monday</td>
             <td class="091500 clr "></td>
             <td class="100500 clr"></td>
             <td class="105500 clr"></td>
