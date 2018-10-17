@@ -16,6 +16,8 @@ app.use("/AddRoom",require("./Router/AddRoomRoute"))
 app.use("/FetchingQuery",express.static(__dirname+"/public_static/FetchingQuery.html"))
 app.use("/AddCourse",require("./Router/AddCourseRoute"))
 app.use("/AddTeacher",require("./Router/AddTeacherRouter"))
+app.use("/TeacherData",require("./Router/TeacherDataRoute"))
+app.use("/TeacherData",express.static(__dirname+"/public_static/TeacherData.html"))
 
 
 

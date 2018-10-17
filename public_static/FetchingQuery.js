@@ -347,7 +347,7 @@ $(()=> {
 
 
         function displaydynamiclecturedata(){
-            return  `<div class="${classsemester}${coursecode}${teacherid}${roomno}   align="center">`+
+            return  `<div class="${classsemester}${coursecode}${teacherid}${roomno}" style="text-align:center">`+
 
 
 
