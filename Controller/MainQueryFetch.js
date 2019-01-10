@@ -134,7 +134,7 @@ async function getallvalues(queryobject){
 
             // console.log(MainQuery);
 
-
+            
 
             conn.query(MainQuery).then(([row,field])=>{
                 // console.log(row.length)

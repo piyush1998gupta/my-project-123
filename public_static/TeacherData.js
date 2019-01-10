@@ -1,7 +1,7 @@
 $(()=>{
     var teacherbranch=$("#teacherbranch").val()
     var teachername =$("#teachername").val()
-
+        
     $("#teacherbranch").change(()=>{
         // console.log($("#teacherbranch").val())
       deleteteacheroption()

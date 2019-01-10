@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />   
+    <title>Teacher Query</title>
+    <script src="jquery.js"></script>
+    <script src="TeacherQuery.js"></script>
+    
+</head>
+<body>
+     <form id="teacherform">
+         <label>Department</label><select id="teacherbranch" name="teacherbranch">
+            <option selected>CSE</option>
+            <option>ECE</option>
+            <option>EEE</option>
+            <option>IT</option>
+            <option>MEC</option>
+            <option>Other</option>
+         </select><br>
+         <label>Semester</label><select id="semester" name="semester">
+             <option selected>5</option>
+         </select><br>
+         <label>Day</label><select id="teacherday" name="teacherday">
+             <option selected value="All">All Day</option>
+             <option>Monday</option>
+             <option>Tuesday</option>
+             <option>Wednesday</option>
+             <option>Thursday</option>
+             <option>Friday</option>
+             
+         </select><br>
+         <label>Start-Time</label> <select id="teacherstarttime" name="teacherendtime">
+            <option  selected value="All"> ALL </option>
+            <option class="endhide" > 10:05:00 </option>
+            <option class="endhide" > 10:55:00 </option>
+            <option class="endhide" > 11:45:00 </option>
+            <option class="endhide"> 12:35:00 </option>
+            <option class="endhide" > 14:05:00 </option>
+            <option class="endhide" > 14:55:00 </option>
+            <option class="endhide" > 15:45:00 </option>
+            <option class="endhide" > 16:35:00 </option>
+
+         </select><br>
+         <label>End-Time</label><select id="teacherendtime" name="teacherendtime">
+            <option  selected value="All"> ALL </option>
+            <option class="endhide" > 10:05:00 </option>
+            <option class="endhide" > 10:55:00 </option>
+            <option class="endhide" > 11:45:00 </option>
+            <option class="endhide"> 12:35:00 </option>
+            <option class="endhide" > 14:05:00 </option>
+            <option class="endhide" > 14:55:00 </option>
+            <option class="endhide" > 15:45:00 </option>
+            <option class="endhide" > 16:35:00 </option>
+
+         </select><br>
+         <label>Course</label>
+         <select id="teachercourse" name="teachercourse">
+             <option selected value="All">All Courses </option>
+             
+         </select><br>
+         <label>Teacher</label> <select id="teachername" name="teachername">
+            <option selected value="All">All Teachers</option>
+        </select><br>
+         <input type="button" id="freeteacher" value="Get Teacher"><br>
+
+     </form>
+
+
+
+
+
+<textarea id="freeTeacherresult">
+
+</textarea>
+</body>
+</html>
