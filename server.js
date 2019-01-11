@@ -23,6 +23,6 @@ app.use("/TeacherQuery",express.static(__dirname+"/public_static/TeacherQuery.ht
 
 
 
-app.listen(9096,(err)=>{
+app.listen(9099,(err)=>{
     console.log("Server Started")
 })

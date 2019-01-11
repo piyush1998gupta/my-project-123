@@ -60,33 +60,33 @@ async function getTeacher(Branch,CourseName){
 
 
 async function getfreeTeachers(Day,StartTime,EndTime,CourseName,Branch){
-    var CourseSign,newCourseName,Branchname,BranchSign
+    var newCourseName,Branchname,querypart=""
     if(CourseName=='All'){
-        CourseSign="<>";
-        newCourseName="bnbsbnj"
-        BranchSign="="
+
         Branchname=Branch
 
+        querypart=" WHERE AddTeacher.TeacherBranch = '"+ Branchname+"' And AddTeacher.TeacherId"
+
     }else{
-        CourseSign="=";
+
         newCourseName=CourseName;
-        BranchSign="<>";
-        Branchname="sghgjahs"
+
+        querypart = "JOIN TeacherCourse join AddCourse WHERE TeacherCourse.TeacherId=AddTeacher.TeacherId AND TeacherCourse.CourseCode=AddCourse.CourseCode AND AddCourse.CourseName = '"+ CourseName + "' AND TeacherCourse.TeacherId "
     }
 
-    // var Query = "SELECT DISTINCT AddTeacher.TeacherName From AddTeacher JOIN TeacherCourse join AddCourse WHERE TeacherCourse.TeacherId=AddTeacher.TeacherId AND TeacherCourse.CourseCode=AddCourse.CourseCode AND AddCourse.CourseName "+ CourseSign+"?  AND AddTeacher.TeacherBranch "+BranchSign +" ? AND TeacherCourse.TeacherId NOT IN\n" +
-    //     "(SELECT DISTINCT AddTeacher.TeacherId FROM `MasterCseTable` JOIN AddTeacher  WHERE MasterCseTable.TeacherId=AddTeacher.TeacherId AND MasterCseTable.StartTime>= ? AND MasterCseTable.EndTime<= ? AND MasterCseTable.Day= ?)"
 
-    var Query = "SELECT DISTINCT AddTeacher.TeacherName From AddTeacher JOIN TeacherCourse join AddCourse WHERE TeacherCourse.TeacherId=AddTeacher.TeacherId AND TeacherCourse.CourseCode=AddCourse.CourseCode AND AddCourse.CourseName "+ CourseSign+"?  AND AddTeacher.TeacherBranch "+BranchSign +" ? AND TeacherCourse.TeacherId NOT IN\n" +
-        "(SELECT DISTINCT AddTeacher.TeacherId FROM `MasterCseTable` JOIN AddTeacher  WHERE MasterCseTable.TeacherId=AddTeacher.TeacherId AND ((MasterCseTable.StartTime>= ? AND MasterCseTable.EndTime<= ?) OR ( MasterCseTable.StartTime < '"+ StartTime +"' And MasterCseTable.EndTime > '"+ StartTime +"' And MasterCseTable.Classtype= 'Lab' )) AND MasterCseTable.Day= ?)"
+    var Query = "SELECT DISTINCT AddTeacher.TeacherName From AddTeacher " + querypart +"  NOT IN\n" +
+        "(SELECT DISTINCT AddTeacher.TeacherId FROM `MasterCseTable` JOIN AddTeacher  WHERE MasterCseTable.TeacherId=AddTeacher.TeacherId AND ((MasterCseTable.StartTime>= ? AND MasterCseTable.StartTime< ?) OR ( MasterCseTable.StartTime < '"+ StartTime +"' And MasterCseTable.EndTime > '"+ StartTime +"' And MasterCseTable.Classtype= 'Lab' )) AND MasterCseTable.Day= ?)"
 
 
-console.log(Query)
+// console.log(Query)
 
     return new Promise(async (resolve,reject)=>{
         await connection.then((conn)=>{
-            conn.query(Query,[newCourseName,Branchname,StartTime,EndTime,Day]).then(([row,field])=>{
-                console.log(row)
+            conn.query(Query,[StartTime,EndTime,Day]).then(([row,field])=>{
+
+                // console.log(row)
+                // console.log(Query)
 
                 resolve(row)
             }).catch((err)=>{
@@ -97,8 +97,8 @@ console.log(Query)
 }
 
 
- getfreeTeachers("Monday","13:15:00","14:05:00","ADA","ECE")
-a
+ // getfreeTeachers("Monday","13:15:00","14:05:00","ADA","ECE")
+
 module.exports={
     getCourse,getTeacher,getfreeTeachers
 }
