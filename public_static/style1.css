@@ -1,0 +1,40 @@
+#AllTeacherresult table td:hover{
+    background-color: #b6d3ab;
+    transform: scale(1.2);
+}
+#AllTeacherresult table td{
+    height: 30px;
+    width: 60px;
+    background: white;
+}
+tbody {
+    border-bottom: black;
+
+}
+.heading {
+    font-weight: bolder;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: center;
+    border-bottom: 2px solid #000000;
+    border-right: 2px solid #000000;
+
+}
+table {
+    border: 3px solid #000000;
+}
+.bott{
+    border-bottom: 2px solid #000000;
+}
+table td{
+    border-left:2px solid #000000 ;
+    border-right: 2px solid #000000;
+}
+.filledlab{
+    border-top:2px solid #000000 ;
+    border-bottom: 2px solid #000000;
+}
+.tut{
+    border-top:2px solid #000000 ;
+    border-bottom: 2px solid #000000;
+}

@@ -5,10 +5,11 @@
     <title>Teacher Query</title>
     <script src="jquery.js"></script>
     <script src="TeacherQuery.js"></script>
+    <link rel="stylesheet" href="style1.css">
     
 </head>
 <body>
-     <form id="teacherform">
+     <form id="teacherform" >
          <label>Department</label><select id="teacherbranch" name="teacherbranch">
             <option selected>CSE</option>
             <option>ECE</option>
@@ -29,25 +30,27 @@
              <option>Friday</option>
              
          </select><br>
-         <label>Start-Time</label> <select id="teacherstarttime" name="teacherendtime">
-            <option  selected value="All"> ALL </option>
-            <option class="endhide" > 10:05:00 </option>
-            <option class="endhide" > 10:55:00 </option>
-            <option class="endhide" > 11:45:00 </option>
-            <option class="endhide"> 12:35:00 </option>
-         <option class="endhide" > 13:15:00 </option>
-            <option class="endhide" > 14:05:00 </option>
-            <option class="endhide" > 14:55:00 </option>
-            <option class="endhide" > 15:45:00 </option>
+         <label>Start-Time</label> <select id="teacherstarttime" name="teacherstarttime">
+         <option  selected value="All"> ALL </option>
+         <option class="starthide" > 09:15:00 </option>
+         <option class="starthide" > 10:05:00 </option>
+         <option class="starthide" > 10:55:00 </option>
+         <option class="starthide" > 11:45:00 </option>
+         <option class="starthide" > 13:15:00 </option>
+         <option class="starthide" > 14:05:00 </option>
+         <option class="starthide" > 14:55:00 </option>
+         <option class="starthide" > 15:45:00 </option>
 
 
-         </select><br>
+
+
+     </select><br>
          <label>End-Time</label><select id="teacherendtime" name="teacherendtime">
-            <option  selected value="All"> ALL </option>
+            <option  selected value="All" > ALL </option>
             <option class="endhide" > 10:05:00 </option>
             <option class="endhide" > 10:55:00 </option>
             <option class="endhide" > 11:45:00 </option>
-            <option class="endhide"> 12:35:00 </option>
+            <option class="endhide" > 12:35:00 </option>
             <option class="endhide" > 14:05:00 </option>
             <option class="endhide" > 14:55:00 </option>
             <option class="endhide" > 15:45:00 </option>
@@ -62,6 +65,7 @@
          <label>Teacher</label> <select id="teachername" name="teachername">
             <option selected value="All">All Teachers</option>
         </select><br>
+         <input type="submit" value="Fetch Query">
          <input type="button" id="freeteacher" value="Get Teacher"><br>
 
      </form>
@@ -70,8 +74,11 @@
 
 
 
-<textarea id="freeTeacherresult">
+<div id="freeTeacherresult">
 
-</textarea>
+
+
+</div>
+     <div id="AllTeacherresult"></div>
 </body>
 </html>

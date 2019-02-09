@@ -185,6 +185,7 @@ $(()=> {
                 data: $(this).serialize(),
 
                 success: function (data) {
+                    console.log(data[0].length)
                     $("#mainresult").removeAttr("hidden");
 
                         // console.log(data)

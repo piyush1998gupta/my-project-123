@@ -20,6 +20,8 @@ app.use("/TeacherData",require("./Router/TeacherDataRoute"))
 app.use("/TeacherData",express.static(__dirname+"/public_static/TeacherData.html"))
 app.use("/TeacherQuery",require("./Router/TeacherQueryRoute"))
 app.use("/TeacherQuery",express.static(__dirname+"/public_static/TeacherQuery.html"))
+app.use("/RoomQuery",require("./Router/RoomQueryRoute"))
+app.use("/RoomQuery",express.static(__dirname+"/public_static/RoomQuery.html"))
 
 
 
