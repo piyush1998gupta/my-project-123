@@ -131,6 +131,13 @@ $(()=>{
 
             }
         })
+
+        $('html, body').animate({
+            scrollTop: $("#freeroomresult").offset().top
+        }, 1000);
+        $('html, body').animate({
+            scrollTop: $("#AllRoomresult").offset().top
+        }, 1000);
         return false;
     })
 

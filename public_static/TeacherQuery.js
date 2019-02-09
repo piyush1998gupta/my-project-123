@@ -49,6 +49,14 @@ $(()=> {
 
             }
         })
+
+
+        $('html, body').animate({
+            scrollTop: $("#AllTeacherresult").offset().top
+        }, 1000);
+        $('html, body').animate({
+            scrollTop: $("#freeTeacherresult").offset().top
+        }, 1000);
         return false;
     })
 
