@@ -25,4 +25,22 @@ route.get("/GetFreeRooms",(req,res)=>{
     })
 
 })
+route.post("/GetAllRoomsData",(req,res)=>{
+    // console.log(req.body)
+    var querydata =
+        {
+            starttime : req.body.roomstarttime,
+            endtime : req.body.roomendtime,
+            roomtype  : req.body.roomtype,
+            day : req.body.roomday,
+            roomno: req.body.roomnumber,
+        }
+
+    // console.log(querydata)
+    controllerroom.getroomdata(querydata).then((data)=>{
+        res.send([data,req.body])
+    }).catch((err)=>{
+        throw err;
+    })
+})
 module.exports = route

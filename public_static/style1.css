@@ -7,6 +7,15 @@
     width: 60px;
     background: white;
 }
+#AllRoomresult table td:hover{
+    background-color: #b6d3ab;
+    transform: scale(1.2);
+}
+#AllRoomresult table td{
+    height: 30px;
+    width: 60px;
+    background: white;
+}
 tbody {
     border-bottom: black;
 

@@ -42,7 +42,7 @@ $(()=> {
             data : $(this).serialize(),
 
             success : function(data){
-                console.log(data)
+                // console.log(data)
                 queryask = data[1]
                 AllTeachers(data[0])
 
@@ -365,7 +365,7 @@ $(()=> {
         $("#AllTeacherresult").append(`
          <font size="1" face="Courier New" >
     <table id="${tableid}" width="100%" height="100%" border="1">
-    <caption id="tablecaption"><h2 align="center">Result:-  ${ tablename }</h2></caption>
+    <caption id="tablecaption"><h2 align="center"> ${ tablename }</h2></caption>
    
     <thead >
     <td class="heading"></td>
